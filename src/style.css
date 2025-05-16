@@ -17,6 +17,11 @@ nav a:hover {
     margin-top: 20px;
     display: flex;
 }
+#psOriginalContainer,
+#psPrefixContainer {
+    margin-top: 20px;
+    display: flex;
+}
 .array-item {
     width: 30px;
     height: 30px;
