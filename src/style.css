@@ -18,3 +18,15 @@ body {
     background-color: #4caf50;
     color: white;
 }
+.pointer-left {
+    background-color: #2196f3;
+    color: white;
+}
+.pointer-right {
+    background-color: #f44336;
+    color: white;
+}
+.pair-found {
+    background-color: #ff9800;
+    color: white;
+}
