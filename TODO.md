@@ -11,7 +11,7 @@ This repo will serve as a simple data structure and algorithm visualizer.  Each 
 Implement demos for:
 - A-01 Sliding Window
 - A-02 Two Pointers
-- A-03 Prefix Sum / Difference Array
+- ~~A-03 Prefix Sum / Difference Array~~
 - A-04 Run-Length Encoding
 - A-05 Dutch National Flag (3-way partition)
 - A-06 Rolling Hash / Rabin-Karp
@@ -162,5 +162,5 @@ Model concurrency scenarios visually:
 - Provide code snippets or pseudocode side-by-side with animations
 - Write short text descriptions of each pattern
 - Add unit tests where possible to verify algorithm outputs
-- Document how to run the visualizer locally
+- ~~Document how to run the visualizer locally~~
 
