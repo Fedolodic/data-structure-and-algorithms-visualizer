@@ -5,7 +5,7 @@ This repo will serve as a simple data structure and algorithm visualizer.  Each 
 ## 1. Setup
 - Decide on a frontend framework (React or vanilla JS is fine)
 - Prepare a build system (npm with webpack or similar)
-- Add a basic page layout with navigation between categories
+- [x] Add a basic page layout with navigation between categories
 
 ## 2. Arrays & Strings
 Implement demos for:
