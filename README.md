@@ -2,7 +2,7 @@
 
 This project contains small interactive demos for various data structure and algorithm patterns.
 
-Currently the project includes a sliding window visualization and a basic two pointers demo. A small navigation bar lets you switch between demos.
+Currently the project includes a sliding window visualization, a basic two pointers demo, and a new prefix sum demonstration. A small navigation bar lets you switch between demos.
 
 ## Running Locally
 
@@ -10,7 +10,7 @@ No build step is required. Simply open one of the HTML files in `src` in any mod
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Open either `src/index.html` (sliding window) or `src/two_pointers.html` in your browser.
+3. Open one of the HTML files under `src` in your browser, such as `index.html` (sliding window), `two_pointers.html`, or `prefix_sum.html`.
 
 You should see controls to start, pause, and reset the selected visualization.
 
