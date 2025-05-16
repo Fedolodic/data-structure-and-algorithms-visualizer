@@ -2,11 +2,11 @@
 
 This project contains small interactive demos for various data structure and algorithm patterns.
 
-Currently the project includes a sliding window visualization and a basic two pointers demo.
+Currently the project includes a sliding window visualization and a basic two pointers demo. A small navigation bar lets you switch between demos.
 
 ## Running Locally
 
-No build step is required. Simply open one of the HTML files in `src` in any modern web browser.
+No build step is required. Simply open one of the HTML files in `src` in any modern web browser. Each page contains links to the other demos.
 
 1. Clone the repository.
 2. Navigate to the project directory.
