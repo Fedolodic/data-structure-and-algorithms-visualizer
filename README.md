@@ -16,3 +16,6 @@ No build step is required. Simply open one of the HTML files in `src` in any mod
 You should see controls to start, pause, and reset the selected visualization.
 
 Contributions are welcome!
+
+## Algorithm Explanations
+See `explainer.md` for a short overview of the Dutch National Flag algorithm.
