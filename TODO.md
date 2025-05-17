@@ -12,7 +12,7 @@ Implement demos for:
 - A-01 Sliding Window
 - A-02 Two Pointers
 - ~~A-03 Prefix Sum / Difference Array~~
-- A-04 Run-Length Encoding
+- ~~A-04 Run-Length Encoding~~
 - A-05 Dutch National Flag (3-way partition)
 - A-06 Rolling Hash / Rabin-Karp
 - A-07 Z-Algorithm (Z-Function)
