@@ -3,6 +3,7 @@
 This project contains small interactive demos for various data structure and algorithm patterns.
 
 Currently the project includes visualizations for the sliding window, two pointers, prefix sum, run-length encoding, and Dutch national flag techniques. A small navigation bar lets you switch between demos.
+Short written explanations for these patterns are available in [explainer.md](explainer.md).
 
 ## Running Locally
 

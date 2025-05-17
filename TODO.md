@@ -160,7 +160,7 @@ Model concurrency scenarios visually:
 ## General Tasks
 - ~~Build minimal controls (start/pause/reset) for each visualization~~
 - Provide code snippets or pseudocode side-by-side with animations
-- Write short text descriptions of each pattern
+- ~~Write short text descriptions of each pattern~~
 - Add unit tests where possible to verify algorithm outputs
 - ~~Document how to run the visualizer locally~~
 
