@@ -46,3 +46,15 @@ nav a:hover {
     background-color: #ff9800;
     color: white;
 }
+.pointer-low {
+    background-color: #9c27b0;
+    color: white;
+}
+.pointer-mid {
+    background-color: #03a9f4;
+    color: white;
+}
+.pointer-high {
+    background-color: #e91e63;
+    color: white;
+}
