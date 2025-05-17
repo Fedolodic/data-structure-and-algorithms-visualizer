@@ -1,19 +1,18 @@
 # Algorithm Explainers
 
-This document provides short descriptions of each visualization currently available.
+This document briefly describes each data structure or algorithm currently visualized in this repository.
 
 ## Sliding Window
-The sliding window pattern iterates over a contiguous portion of an array or string. You maintain a start and end index and "slide" the window to process subranges efficiently.
+The sliding window technique processes a contiguous subset of items by maintaining a window of fixed or dynamic size that moves across the data. It is useful for tasks like subarray sums or finding patterns in sequences.
 
 ## Two Pointers
-The two pointers technique moves two indices through a collection. Pointers may move toward each other or in tandem to solve tasks like searching pairs or removing elements in-place.
+Two pointers iterate through a collection from different positions, often one from the start and one from the end. The pointers move toward each other to solve problems such as pair sums or checking palindromes in linear time.
 
 ## Prefix Sum
-Prefix sums store running totals so that range queries can be answered in constant time. Each prefix[i] equals the sum of all values up to index i.
+A prefix sum array stores the cumulative sum up to each index. By subtracting two prefix sums, we can compute the sum of any subarray in constant time, enabling efficient range queries.
 
 ## Run-Length Encoding
-Run-length encoding compresses sequences by replacing repeated values with a single value and count. It is useful for data with many consecutive duplicates.
+Run-length encoding compresses repeated characters or numbers by recording the value and its consecutive count. For example, `AAABB` becomes `3A2B`.
 
 ## Dutch National Flag
-The Dutch national flag algorithm partitions an array of 0s, 1s, and 2s using three indices (low, mid, high). Elements less than the pivot move left, greater elements move right, and equals stay in the middle.
-
+The Dutch National Flag algorithm sorts an array containing three distinct values (0, 1, 2) using three pointers: low, mid, and high. It partitions the array in a single pass so that all 0s come first, followed by 1s, then 2s.
