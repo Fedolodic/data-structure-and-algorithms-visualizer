@@ -14,7 +14,7 @@ Implement demos for:
 - ~~A-03 Prefix Sum / Difference Array~~
 - ~~A-04 Run-Length Encoding~~
 - ~~A-05 Dutch National Flag (3-way partition)~~
-- A-06 Rolling Hash / Rabin-Karp
+- ~~A-06 Rolling Hash / Rabin-Karp~~
 - A-07 Z-Algorithm (Z-Function)
 - A-08 KMP Prefix Function
 - A-09 Manacher Center Expansion
