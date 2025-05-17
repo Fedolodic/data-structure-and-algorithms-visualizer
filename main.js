@@ -19,7 +19,9 @@ function visualize(arr) {
 
 loadWasm().then(exports => {
   const { memory, bubble_sort, __heap_base } = exports;
+  const pyService = new ExecutionService();
   const button = document.getElementById('run');
+  const pyButton = document.getElementById('py-run');
   button.addEventListener('click', () => {
     const length = 10;
     const heapBase = __heap_base.value;
@@ -30,5 +32,17 @@ loadWasm().then(exports => {
     visualize(arr);
     bubble_sort(heapBase, length);
     setTimeout(() => visualize(arr), 100);
+  });
+
+  pyButton?.addEventListener('click', async () => {
+    const length = 10;
+    const arr = Array.from({ length }, () => Math.floor(Math.random() * 100));
+    visualize(arr);
+    try {
+      const result = await pyService.run(`wasm_sort(${JSON.stringify(arr)})`);
+      visualize(result);
+    } catch (err) {
+      console.error(err);
+    }
   });
 });
