@@ -13,7 +13,7 @@ Implement demos for:
 - A-02 Two Pointers
 - ~~A-03 Prefix Sum / Difference Array~~
 - ~~A-04 Run-Length Encoding~~
-- A-05 Dutch National Flag (3-way partition)
+- ~~A-05 Dutch National Flag (3-way partition)~~
 - A-06 Rolling Hash / Rabin-Karp
 - A-07 Z-Algorithm (Z-Function)
 - A-08 KMP Prefix Function
@@ -158,7 +158,7 @@ Model concurrency scenarios visually:
 - C-10 Thread-Pool Executor
 
 ## General Tasks
-- Build minimal controls (start/pause/reset) for each visualization
+- ~~Build minimal controls (start/pause/reset) for each visualization~~
 - Provide code snippets or pseudocode side-by-side with animations
 - Write short text descriptions of each pattern
 - Add unit tests where possible to verify algorithm outputs
