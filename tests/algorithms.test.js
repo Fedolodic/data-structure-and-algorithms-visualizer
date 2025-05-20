@@ -24,5 +24,11 @@ assert.deepStrictEqual(algo.dutchNationalFlagSort([2,0,1,2,1,0]), [0,0,1,1,2,2])
 assert.strictEqual(algo.rabinKarp('abracadabra', 'cada'), 4);
 assert.strictEqual(algo.rabinKarp('abcdef', 'gh'), -1);
 
+// Z-Algorithm
+assert.deepStrictEqual(
+  algo.zAlgorithm('aabcaabxaaaz'),
+  [0,1,0,0,3,1,0,0,2,2,1,0]
+);
+
 console.log('All tests passed!');
 
