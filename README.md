@@ -2,7 +2,7 @@
 
 This project contains small interactive demos for various data structure and algorithm patterns.
 
-Currently the project includes visualizations for the sliding window, two pointers, prefix sum, run-length encoding, Dutch national flag, and rolling hash techniques. A small navigation bar lets you switch between demos.
+Currently the project includes visualizations for the sliding window, two pointers, prefix sum, run-length encoding, Dutch national flag, rolling hash, and Z-algorithm techniques. A small navigation bar lets you switch between demos.
 Short written explanations for these patterns are available in [explainer.md](explainer.md).
 
 ## Running Locally
@@ -11,7 +11,7 @@ No build step is required. Simply open one of the HTML files in `src` in any mod
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), or `src/rolling_hash.html` (rolling hash) in your browser.
+3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), `src/rolling_hash.html` (rolling hash), or `src/z_algorithm.html` (Z-algorithm) in your browser.
 
 You should see controls to start, pause, and reset the selected visualization.
 
@@ -26,4 +26,4 @@ node tests/algorithms.test.js
 ```
 
 ## Algorithm Explanations
-See `explainer.md` for a short overview of the Dutch National Flag algorithm.
+See `explainer.md` for short overviews of each algorithm implemented so far.

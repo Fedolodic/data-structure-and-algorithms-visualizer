@@ -19,3 +19,6 @@ The Dutch National Flag algorithm sorts an array containing three distinct value
 
 ## Rolling Hash
 Rolling hash techniques, such as Rabin-Karp, compute hash values for a moving window of characters. By updating the hash in constant time as the window slides, we can quickly search for a pattern inside a string.
+
+## Z-Algorithm
+The Z-algorithm computes an array where each position stores the length of the longest substring starting from that position that is also a prefix of the string. It enables efficient pattern matching and runs in linear time by keeping track of a window of known matches.
