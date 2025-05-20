@@ -252,6 +252,18 @@ function sparseTableQuery(st, l, r) {
   return Math.min(table[k][l], table[k][r - (1 << k) + 1]);
 }
 
+// Hash-map based two-sum check
+function hashMapTwoSum(arr, target) {
+  const seen = new Set();
+  for (const num of arr) {
+    if (seen.has(target - num)) {
+      return true;
+    }
+    seen.add(num);
+  }
+  return false;
+}
+
 module.exports = {
   slidingWindowSubarrays,
   twoPointersSumExists,
@@ -269,4 +281,5 @@ module.exports = {
   segmentTreeQuery,
   buildSparseTable,
   sparseTableQuery,
+  hashMapTwoSum,
 };

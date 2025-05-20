@@ -43,3 +43,6 @@ A segment tree precomputes sums for intervals of an array so that any range sum 
 
 ## Sparse Table Range Minimum Query
 A sparse table precomputes range minimums for a static array using overlapping blocks of power-of-two sizes. Queries take O(1) time by combining two blocks that cover the range. Building the table costs O(n log n).
+
+## Hash Map Two-Sum
+The hash map two-sum technique scans through an array while storing previously seen numbers in a set. For each new value we check if the complement `target - value` has already been seen. If so, a pair adding up to the target exists. This approach finds a solution in linear time using additional memory for the set.
