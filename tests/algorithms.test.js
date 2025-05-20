@@ -1,0 +1,28 @@
+const assert = require('assert');
+const algo = require('../src/algorithms');
+
+// Sliding window subarrays
+assert.deepStrictEqual(
+  algo.slidingWindowSubarrays([1,2,3,4], 2),
+  [[1,2],[2,3],[3,4]]
+);
+
+// Two pointers sum exists
+assert.strictEqual(algo.twoPointersSumExists([1,2,3,4,5], 9), true);
+assert.strictEqual(algo.twoPointersSumExists([1,2,3,4,5], 10), false);
+
+// Prefix sum
+assert.deepStrictEqual(algo.prefixSum([1,2,3]), [1,3,6]);
+
+// Run-length encoding
+assert.strictEqual(algo.runLengthEncode('aaabbc'), 'a3b2c1');
+
+// Dutch national flag sort
+assert.deepStrictEqual(algo.dutchNationalFlagSort([2,0,1,2,1,0]), [0,0,1,1,2,2]);
+
+// Rabin-Karp
+assert.strictEqual(algo.rabinKarp('abracadabra', 'cada'), 4);
+assert.strictEqual(algo.rabinKarp('abcdef', 'gh'), -1);
+
+console.log('All tests passed!');
+
