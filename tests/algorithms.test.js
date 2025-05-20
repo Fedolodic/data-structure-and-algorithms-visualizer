@@ -30,5 +30,11 @@ assert.deepStrictEqual(
   [0,1,0,0,3,1,0,0,2,2,1,0]
 );
 
+// KMP Prefix Function
+assert.deepStrictEqual(
+  algo.kmpPrefixFunction('ababaca'),
+  [0,0,1,2,3,0,1]
+);
+
 console.log('All tests passed!');
 

@@ -11,7 +11,7 @@ No build step is required. Simply open one of the HTML files in `src` in any mod
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), `src/rolling_hash.html` (rolling hash), or `src/z_algorithm.html` (Z-algorithm) in your browser.
+3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), `src/rolling_hash.html` (rolling hash), `src/z_algorithm.html` (Z-algorithm), or `src/kmp_prefix.html` (KMP prefix function) in your browser.
 
 You should see controls to start, pause, and reset the selected visualization.
 
