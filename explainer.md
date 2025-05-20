@@ -28,3 +28,6 @@ The prefix function used in the Knuth-Morris-Pratt string search computes for ea
 
 ## Boyer-Moore Majority Vote
 The Boyer-Moore majority vote algorithm finds a majority element in a sequence, if one exists, in linear time and constant space. It keeps a current candidate and a counter that is increased when the same value is seen and decreased otherwise. After one pass, the candidate is the potential majority element, which can be verified with a second pass.
+
+## Next Greater Element (Monotonic Stack)
+The next greater element problem asks for each element in an array to find the next element to its right that is larger, or `-1` if none exists. A common solution processes the array from right to left while maintaining a stack that is strictly decreasing. Elements are popped from the stack while they are less than or equal to the current value, leaving the top of the stack as the next greater element. The current value is then pushed onto the stack.

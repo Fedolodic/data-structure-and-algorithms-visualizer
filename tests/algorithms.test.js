@@ -40,5 +40,11 @@ assert.deepStrictEqual(
 assert.strictEqual(algo.majorityVote([1,2,2,3,2,2,4]), 2);
 assert.strictEqual(algo.majorityVote([1,2,3,4]), null);
 
+// Next Greater Elements
+assert.deepStrictEqual(
+  algo.nextGreaterElements([2,1,2,4,3]),
+  [4,2,4,-1,-1]
+);
+
 console.log('All tests passed!');
 
