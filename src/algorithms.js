@@ -152,6 +152,84 @@ function nextGreaterElements(arr) {
   return res;
 }
 
+// Manacher's algorithm for longest palindromic substring
+function manacherLongestPalindrome(s) {
+  if (s.length === 0) return '';
+  const t = '#' + s.split('').join('#') + '#';
+  const p = new Array(t.length).fill(0);
+  let center = 0, right = 0;
+  let bestCenter = 0, bestLen = 0;
+
+  for (let i = 0; i < t.length; i++) {
+    const mirror = 2 * center - i;
+    if (i < right) {
+      p[i] = Math.min(right - i, p[mirror]);
+    }
+    while (
+      i - p[i] - 1 >= 0 &&
+      i + p[i] + 1 < t.length &&
+      t[i - p[i] - 1] === t[i + p[i] + 1]
+    ) {
+      p[i]++;
+    }
+    if (i + p[i] > right) {
+      center = i;
+      right = i + p[i];
+    }
+    if (p[i] > bestLen) {
+      bestLen = p[i];
+      bestCenter = i;
+    }
+  }
+  const start = Math.floor((bestCenter - bestLen) / 2);
+  return s.substring(start, start + bestLen);
+}
+
+// Cycle sort for in-place rearrangement
+function cycleSort(arr) {
+  for (let cycleStart = 0; cycleStart < arr.length - 1; cycleStart++) {
+    let item = arr[cycleStart];
+    let pos = cycleStart;
+    for (let i = cycleStart + 1; i < arr.length; i++) {
+      if (arr[i] < item) pos++;
+    }
+    if (pos === cycleStart) continue;
+    while (item === arr[pos]) pos++;
+    [arr[pos], item] = [item, arr[pos]];
+    while (pos !== cycleStart) {
+      pos = cycleStart;
+      for (let i = cycleStart + 1; i < arr.length; i++) {
+        if (arr[i] < item) pos++;
+      }
+      while (item === arr[pos]) pos++;
+      [arr[pos], item] = [item, arr[pos]];
+    }
+  }
+  return arr;
+}
+
+// Segment tree for static range sum queries
+function buildSegmentTree(arr) {
+  const n = arr.length;
+  const tree = new Array(2 * n);
+  for (let i = 0; i < n; i++) tree[n + i] = arr[i];
+  for (let i = n - 1; i > 0; i--) tree[i] = tree[i * 2] + tree[i * 2 + 1];
+  return { n, tree };
+}
+
+function segmentTreeQuery(treeObj, l, r) {
+  let { n, tree } = treeObj;
+  l += n; r += n;
+  let sum = 0;
+  while (l <= r) {
+    if ((l & 1) === 1) sum += tree[l++];
+    if ((r & 1) === 0) sum += tree[r--];
+    l >>= 1;
+    r >>= 1;
+  }
+  return sum;
+}
+
 module.exports = {
   slidingWindowSubarrays,
   twoPointersSumExists,
@@ -163,4 +241,8 @@ module.exports = {
   kmpPrefixFunction,
   majorityVote,
   nextGreaterElements,
+  manacherLongestPalindrome,
+  cycleSort,
+  buildSegmentTree,
+  segmentTreeQuery,
 };

@@ -17,12 +17,12 @@ Implement demos for:
 - ~~A-06 Rolling Hash / Rabin-Karp~~
 - ~~A-07 Z-Algorithm (Z-Function)~~
 - ~~A-08 KMP Prefix Function~~
-- A-09 Manacher Center Expansion
+- ~~A-09 Manacher Center Expansion~~
 - ~~A-10 Boyer-Moore Majority-Vote~~
-- A-11 Cycle Sort / In-place Rearrangement
+- ~~A-11 Cycle Sort / In-place Rearrangement~~
 - ~~A-12 Monotonic Stack (Next Greater Element)~~
 - A-13 Sparse Table Range Query
-- A-14 Segment Tree Range Sum (static arrays)
+- ~~A-14 Segment Tree Range Sum (static arrays)~~
 
 ## 3. Hashing & Counting
 Add visualizations for:

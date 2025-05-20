@@ -31,3 +31,12 @@ The Boyer-Moore majority vote algorithm finds a majority element in a sequence, 
 
 ## Next Greater Element (Monotonic Stack)
 The next greater element problem asks for each element in an array to find the next element to its right that is larger, or `-1` if none exists. A common solution processes the array from right to left while maintaining a stack that is strictly decreasing. Elements are popped from the stack while they are less than or equal to the current value, leaving the top of the stack as the next greater element. The current value is then pushed onto the stack.
+
+## Manacher Longest Palindrome
+Manacher's algorithm finds the longest palindromic substring of a string in linear time. It transforms the string with separators to handle even lengths uniformly and expands around each center while tracking the rightmost reached position. This allows reuse of previously computed palindrome lengths for efficiency.
+
+## Cycle Sort
+Cycle sort places each element into its correct position with the minimum number of writes. For every starting index it computes where the item should go by counting smaller elements. Items are cycled through their target positions until all are in order.
+
+## Segment Tree Range Sum
+A segment tree precomputes sums for intervals of an array so that any range sum query can be answered in `O(log n)` time. The array is stored in a binary tree where each internal node holds the sum of its children.
