@@ -44,6 +44,15 @@ function runLengthEncode(str) {
   return out;
 }
 
+// Frequency map counting for characters in a string
+function frequencyMapCounting(str) {
+  const map = {};
+  for (const ch of str) {
+    map[ch] = (map[ch] || 0) + 1;
+  }
+  return map;
+}
+
 function dutchNationalFlagSort(arr) {
   let low = 0, mid = 0, high = arr.length - 1;
   while (mid <= high) {
@@ -281,5 +290,6 @@ module.exports = {
   segmentTreeQuery,
   buildSparseTable,
   sparseTableQuery,
+  frequencyMapCounting,
   hashMapTwoSum,
 };

@@ -67,5 +67,11 @@ assert.strictEqual(algo.sparseTableQuery(st, 1, 3), -1);
 assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 5), true);
 assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 10), false);
 
+// Frequency map counting
+assert.deepStrictEqual(
+  algo.frequencyMapCounting('abbccc'),
+  { a:1, b:2, c:3 }
+);
+
 console.log('All tests passed!');
 
