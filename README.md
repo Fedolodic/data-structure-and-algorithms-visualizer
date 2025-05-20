@@ -17,5 +17,13 @@ You should see controls to start, pause, and reset the selected visualization.
 
 Contributions are welcome!
 
+## Running Tests
+
+Unit tests verify the outputs of the pure algorithm implementations. Run them using Node:
+
+```bash
+node tests/algorithms.test.js
+```
+
 ## Algorithm Explanations
 See `explainer.md` for a short overview of the Dutch National Flag algorithm.
