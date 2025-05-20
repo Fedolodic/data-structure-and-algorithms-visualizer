@@ -26,7 +26,7 @@ Implement demos for:
 
 ## 3. Hashing & Counting
 Add visualizations for:
-- H-01 Frequency Map Counting
+- ~~H-01 Frequency Map Counting~~
 - H-02 Ordered Map / TreeMap Window
 - H-03 Hash-Set Intersection
 - ~~H-04 Hash-Map Two-Sum~~
