@@ -22,3 +22,6 @@ Rolling hash techniques, such as Rabin-Karp, compute hash values for a moving wi
 
 ## Z-Algorithm
 The Z-algorithm computes an array where each position stores the length of the longest substring starting from that position that is also a prefix of the string. It enables efficient pattern matching and runs in linear time by keeping track of a window of known matches.
+
+## KMP Prefix Function
+The prefix function used in the Knuth-Morris-Pratt string search computes for each position the length of the longest proper prefix that is also a suffix of the substring ending at that position. This table allows the algorithm to skip redundant comparisons when a mismatch occurs.

@@ -16,7 +16,7 @@ Implement demos for:
 - ~~A-05 Dutch National Flag (3-way partition)~~
 - ~~A-06 Rolling Hash / Rabin-Karp~~
 - ~~A-07 Z-Algorithm (Z-Function)~~
-- A-08 KMP Prefix Function
+- ~~A-08 KMP Prefix Function~~
 - A-09 Manacher Center Expansion
 - A-10 Boyer-Moore Majority-Vote
 - A-11 Cycle Sort / In-place Rearrangement
