@@ -25,3 +25,6 @@ The Z-algorithm computes an array where each position stores the length of the l
 
 ## KMP Prefix Function
 The prefix function used in the Knuth-Morris-Pratt string search computes for each position the length of the longest proper prefix that is also a suffix of the substring ending at that position. This table allows the algorithm to skip redundant comparisons when a mismatch occurs.
+
+## Boyer-Moore Majority Vote
+The Boyer-Moore majority vote algorithm finds a majority element in a sequence, if one exists, in linear time and constant space. It keeps a current candidate and a counter that is increased when the same value is seen and decreased otherwise. After one pass, the candidate is the potential majority element, which can be verified with a second pass.
