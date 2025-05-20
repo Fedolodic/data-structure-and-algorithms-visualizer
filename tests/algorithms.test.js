@@ -36,5 +36,9 @@ assert.deepStrictEqual(
   [0,0,1,2,3,0,1]
 );
 
+// Boyer-Moore Majority Vote
+assert.strictEqual(algo.majorityVote([1,2,2,3,2,2,4]), 2);
+assert.strictEqual(algo.majorityVote([1,2,3,4]), null);
+
 console.log('All tests passed!');
 
