@@ -40,3 +40,6 @@ Cycle sort places each element into its correct position with the minimum number
 
 ## Segment Tree Range Sum
 A segment tree precomputes sums for intervals of an array so that any range sum query can be answered in `O(log n)` time. The array is stored in a binary tree where each internal node holds the sum of its children.
+
+## Sparse Table Range Minimum Query
+A sparse table precomputes range minimums for a static array using overlapping blocks of power-of-two sizes. Queries take O(1) time by combining two blocks that cover the range. Building the table costs O(n log n).
