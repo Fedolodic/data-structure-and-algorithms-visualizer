@@ -19,3 +19,30 @@ The Dutch National Flag algorithm sorts an array containing three distinct value
 
 ## Rolling Hash
 Rolling hash techniques, such as Rabin-Karp, compute hash values for a moving window of characters. By updating the hash in constant time as the window slides, we can quickly search for a pattern inside a string.
+
+## Z-Algorithm
+The Z-algorithm computes an array where each position stores the length of the longest substring starting from that position that is also a prefix of the string. It enables efficient pattern matching and runs in linear time by keeping track of a window of known matches.
+
+## KMP Prefix Function
+The prefix function used in the Knuth-Morris-Pratt string search computes for each position the length of the longest proper prefix that is also a suffix of the substring ending at that position. This table allows the algorithm to skip redundant comparisons when a mismatch occurs.
+
+## Boyer-Moore Majority Vote
+The Boyer-Moore majority vote algorithm finds a majority element in a sequence, if one exists, in linear time and constant space. It keeps a current candidate and a counter that is increased when the same value is seen and decreased otherwise. After one pass, the candidate is the potential majority element, which can be verified with a second pass.
+
+## Next Greater Element (Monotonic Stack)
+The next greater element problem asks for each element in an array to find the next element to its right that is larger, or `-1` if none exists. A common solution processes the array from right to left while maintaining a stack that is strictly decreasing. Elements are popped from the stack while they are less than or equal to the current value, leaving the top of the stack as the next greater element. The current value is then pushed onto the stack.
+
+## Manacher Longest Palindrome
+Manacher's algorithm finds the longest palindromic substring of a string in linear time. It transforms the string with separators to handle even lengths uniformly and expands around each center while tracking the rightmost reached position. This allows reuse of previously computed palindrome lengths for efficiency.
+
+## Cycle Sort
+Cycle sort places each element into its correct position with the minimum number of writes. For every starting index it computes where the item should go by counting smaller elements. Items are cycled through their target positions until all are in order.
+
+## Segment Tree Range Sum
+A segment tree precomputes sums for intervals of an array so that any range sum query can be answered in `O(log n)` time. The array is stored in a binary tree where each internal node holds the sum of its children.
+
+## Sparse Table Range Minimum Query
+A sparse table precomputes range minimums for a static array using overlapping blocks of power-of-two sizes. Queries take O(1) time by combining two blocks that cover the range. Building the table costs O(n log n).
+
+## Hash Map Two-Sum
+The hash map two-sum technique scans through an array while storing previously seen numbers in a set. For each new value we check if the complement `target - value` has already been seen. If so, a pair adding up to the target exists. This approach finds a solution in linear time using additional memory for the set.

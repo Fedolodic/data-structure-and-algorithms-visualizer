@@ -30,5 +30,42 @@ assert.deepStrictEqual(
   [0,1,0,0,3,1,0,0,2,2,1,0]
 );
 
+// KMP Prefix Function
+assert.deepStrictEqual(
+  algo.kmpPrefixFunction('ababaca'),
+  [0,0,1,2,3,0,1]
+);
+
+// Boyer-Moore Majority Vote
+assert.strictEqual(algo.majorityVote([1,2,2,3,2,2,4]), 2);
+assert.strictEqual(algo.majorityVote([1,2,3,4]), null);
+
+// Next Greater Elements
+assert.deepStrictEqual(
+  algo.nextGreaterElements([2,1,2,4,3]),
+  [4,2,4,-1,-1]
+);
+
+// Manacher longest palindromic substring
+assert.strictEqual(algo.manacherLongestPalindrome('cbbd'), 'bb');
+assert.strictEqual(algo.manacherLongestPalindrome('racecar'), 'racecar');
+
+// Cycle sort
+assert.deepStrictEqual(algo.cycleSort([3,1,4,2]), [1,2,3,4]);
+
+// Segment tree range sum
+const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
+assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);
+assert.strictEqual(algo.segmentTreeQuery(tree, 0, 5), 36);
+
+// Sparse table range minimum query
+const st = algo.buildSparseTable([1,3,-1,7,0,3]);
+assert.strictEqual(algo.sparseTableQuery(st, 2, 4), -1);
+assert.strictEqual(algo.sparseTableQuery(st, 1, 3), -1);
+
+// Hash-map two-sum
+assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 5), true);
+assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 10), false);
+
 console.log('All tests passed!');
 

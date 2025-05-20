@@ -27,6 +27,12 @@ nav a:hover {
     margin-top: 20px;
     display: flex;
 }
+#ngeArrayContainer,
+#ngeStackContainer,
+#ngeResultContainer {
+    margin-top: 20px;
+    display: flex;
+}
 .array-item {
     width: 30px;
     height: 30px;
@@ -62,4 +68,8 @@ nav a:hover {
 .pointer-high {
     background-color: #e91e63;
     color: white;
+}
+
+.seen-item {
+    background-color: #ffeb3b;
 }
