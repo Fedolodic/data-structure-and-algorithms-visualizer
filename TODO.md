@@ -20,7 +20,7 @@ Implement demos for:
 - A-09 Manacher Center Expansion
 - ~~A-10 Boyer-Moore Majority-Vote~~
 - A-11 Cycle Sort / In-place Rearrangement
-- A-12 Monotonic Stack (Next Greater Element)
+- ~~A-12 Monotonic Stack (Next Greater Element)~~
 - A-13 Sparse Table Range Query
 - A-14 Segment Tree Range Sum (static arrays)
 
