@@ -63,5 +63,9 @@ const st = algo.buildSparseTable([1,3,-1,7,0,3]);
 assert.strictEqual(algo.sparseTableQuery(st, 2, 4), -1);
 assert.strictEqual(algo.sparseTableQuery(st, 1, 3), -1);
 
+// Hash-map two-sum
+assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 5), true);
+assert.strictEqual(algo.hashMapTwoSum([1,2,3,4], 10), false);
+
 console.log('All tests passed!');
 
