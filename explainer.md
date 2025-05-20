@@ -16,3 +16,6 @@ Run-length encoding compresses repeated characters or numbers by recording the v
 
 ## Dutch National Flag
 The Dutch National Flag algorithm sorts an array containing three distinct values (0, 1, 2) using three pointers: low, mid, and high. It partitions the array in a single pass so that all 0s come first, followed by 1s, then 2s.
+
+## Rolling Hash
+Rolling hash techniques, such as Rabin-Karp, compute hash values for a moving window of characters. By updating the hash in constant time as the window slides, we can quickly search for a pattern inside a string.
