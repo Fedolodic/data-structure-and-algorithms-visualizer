@@ -58,5 +58,10 @@ const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
 assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);
 assert.strictEqual(algo.segmentTreeQuery(tree, 0, 5), 36);
 
+// Sparse table range minimum query
+const st = algo.buildSparseTable([1,3,-1,7,0,3]);
+assert.strictEqual(algo.sparseTableQuery(st, 2, 4), -1);
+assert.strictEqual(algo.sparseTableQuery(st, 1, 3), -1);
+
 console.log('All tests passed!');
 
