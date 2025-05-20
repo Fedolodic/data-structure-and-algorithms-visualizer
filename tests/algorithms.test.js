@@ -46,5 +46,17 @@ assert.deepStrictEqual(
   [4,2,4,-1,-1]
 );
 
+// Manacher longest palindromic substring
+assert.strictEqual(algo.manacherLongestPalindrome('cbbd'), 'bb');
+assert.strictEqual(algo.manacherLongestPalindrome('racecar'), 'racecar');
+
+// Cycle sort
+assert.deepStrictEqual(algo.cycleSort([3,1,4,2]), [1,2,3,4]);
+
+// Segment tree range sum
+const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
+assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);
+assert.strictEqual(algo.segmentTreeQuery(tree, 0, 5), 36);
+
 console.log('All tests passed!');
 
