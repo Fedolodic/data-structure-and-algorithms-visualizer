@@ -49,3 +49,6 @@ Frequency map counting tallies how many times each element appears in a collecti
 
 ## Hash Map Two-Sum
 The hash map two-sum technique scans through an array while storing previously seen numbers in a set. For each new value we check if the complement `target - value` has already been seen. If so, a pair adding up to the target exists. This approach finds a solution in linear time using additional memory for the set.
+
+## Hash-Set Intersection
+Hash-set intersection collects the common elements between two arrays. One array is inserted into a set for constant-time lookups. We then scan the second array, checking if each value exists in the set and has not already been added to the result. This yields the intersection in linear time with respect to the total number of elements.
