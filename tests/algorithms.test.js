@@ -100,6 +100,14 @@ assert.strictEqual(algo.subarraySumEqualsK([1,2,3], 7), false);
 assert.strictEqual(algo.slidingWindowAnagram('cbaebabacd', 'abc'), true);
 assert.strictEqual(algo.slidingWindowAnagram('abcdef', 'gh'), false);
 
+// Bloom filter basic add/contains
+const bf = algo.createBloomFilter(16, 3);
+bf.add('hello');
+bf.add('world');
+assert.strictEqual(bf.contains('hello'), true);
+assert.strictEqual(bf.contains('world'), true);
+assert.strictEqual(bf.contains('test'), false);
+
 // Bitmap distinct counting
 assert.strictEqual(algo.bitmapCountDistinct([3,1,4,1,2,0,5], 5), 6);
 assert.strictEqual(algo.bitmapCountDistinct([], 10), 0);
