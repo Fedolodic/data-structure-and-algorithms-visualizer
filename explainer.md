@@ -55,3 +55,6 @@ Hash-set intersection collects the common elements between two arrays. One array
 
 ## Prefix-Sum + Hash (Subarray Sum = K)
 To determine whether a subarray sums to a target `K`, we compute running prefix sums while storing previously seen sums in a map. At each step we check if `currentSum - K` has appeared before. If so, a subarray totaling `K` ends at the current index. This method finds a match in linear time.
+
+## Counting Sort
+Counting sort is efficient for integers in a small range. It counts how many times each value appears and then emits values in order based on those counts. The algorithm runs in O(n + k) time for `n` elements and range size `k`.
