@@ -30,7 +30,7 @@ Add visualizations for:
 - H-02 Ordered Map / TreeMap Window
 - ~~H-03 Hash-Set Intersection~~
 - ~~H-04 Hash-Map Two-Sum~~
-- H-05 Prefix-Sum + Hash (subarray = K)
+- ~~H-05 Prefix-Sum + Hash (subarray = K)~~
 - H-06 Sliding Window w/ Counter (anagram)
 - H-07 Bloom Filter
 - H-08 Cuckoo Hashing
