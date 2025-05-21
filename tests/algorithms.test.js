@@ -112,5 +112,14 @@ assert.strictEqual(bf.contains('test'), false);
 assert.strictEqual(algo.bitmapCountDistinct([3,1,4,1,2,0,5], 5), 6);
 assert.strictEqual(algo.bitmapCountDistinct([], 10), 0);
 
+// LRU cache basic put/get eviction
+const lru = algo.createLRUCache(2);
+lru.put(1, 'a');
+lru.put(2, 'b');
+assert.strictEqual(lru.get(1), 'a');
+lru.put(3, 'c'); // evicts key 2
+assert.strictEqual(lru.get(2), null);
+assert.deepStrictEqual(lru.entries(), [[1,'a'], [3,'c']]);
+
 console.log('All tests passed!');
 
