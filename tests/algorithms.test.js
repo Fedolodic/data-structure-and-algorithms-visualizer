@@ -56,6 +56,12 @@ assert.deepStrictEqual(algo.cycleSort([3,1,4,2]), [1,2,3,4]);
 // Counting sort
 assert.deepStrictEqual(algo.countingSort([3,1,4,1,2,0,5]), [0,1,1,2,3,4,5]);
 
+// Bucket sort
+assert.deepStrictEqual(
+  algo.bucketSort([29,25,3,49,9,37,21,43]),
+  [3,9,21,25,29,37,43,49]
+);
+
 // Segment tree range sum
 const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
 assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);
