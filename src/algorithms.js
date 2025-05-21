@@ -503,6 +503,26 @@ function createLRUCache(capacity = 2) {
   return { get, put, entries };
 }
 
+// Binary search lower bound (first index with value >= target)
+function lowerBound(arr, target) {
+  let l = 0, r = arr.length;
+  while (l < r) {
+    const m = Math.floor((l + r) / 2);
+    if (arr[m] < target) l = m + 1; else r = m;
+  }
+  return l;
+}
+
+// Binary search upper bound (first index with value > target)
+function upperBound(arr, target) {
+  let l = 0, r = arr.length;
+  while (l < r) {
+    const m = Math.floor((l + r) / 2);
+    if (arr[m] <= target) l = m + 1; else r = m;
+  }
+  return l;
+}
+
 module.exports = {
   slidingWindowSubarrays,
   twoPointersSumExists,
@@ -531,5 +551,7 @@ module.exports = {
   radixSort,
   createBloomFilter,
   createLRUCache,
+  lowerBound,
+  upperBound,
   slidingWindowAnagram,
 };
