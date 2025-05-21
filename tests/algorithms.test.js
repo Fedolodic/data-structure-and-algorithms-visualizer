@@ -139,6 +139,12 @@ assert.strictEqual(algo.lowerBound([1,3,5,7], 6), 3);
 assert.strictEqual(algo.upperBound([1,3,5,7], 5), 3);
 assert.strictEqual(algo.upperBound([1,3,5,7], 0), 0);
 
+// First and last occurrence search
+assert.strictEqual(algo.firstOccurrence([1,2,2,2,3], 2), 1);
+assert.strictEqual(algo.lastOccurrence([1,2,2,2,3], 2), 3);
+assert.strictEqual(algo.firstOccurrence([1,2,3], 4), -1);
+assert.strictEqual(algo.lastOccurrence([1,2,3], 4), -1);
+
 // Rotated array search
 assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 0), 4);
 assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 3), -1);

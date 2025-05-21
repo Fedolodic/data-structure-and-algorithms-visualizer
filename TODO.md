@@ -78,7 +78,7 @@ Include interactive traces for:
 - ~~B-01 Lower / Upper Bound~~
 - ~~B-02 Rotated Array Search~~
 - ~~B-03 Peak Element~~
-- B-04 First / Last Occurrence
+- ~~B-04 First / Last Occurrence~~
 - B-05 Median of Two Sorted Arrays
 - B-06 K-th Smallest in Sorted Matrix
 - B-07 “Aggressive Cows” (min-dist search)

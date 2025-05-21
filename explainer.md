@@ -83,6 +83,9 @@ The interval merge algorithm combines overlapping intervals into a minimal set o
 ## Binary Search Lower/Upper Bound
 Binary search can locate the position where a target should be inserted in a sorted array. The lower bound returns the first index whose value is greater than or equal to the target, while the upper bound returns the first index with a value strictly greater than the target. Both variants repeatedly split the search range in half until the position is determined.
 
+## First and Last Occurrence
+To find the first and last positions of a target value in a sorted array we can run two binary searches. The first search moves left whenever it sees a value greater than or equal to the target, keeping track of matches. The second search moves right on values less than or equal to the target. The resulting indices give the range of occurrences or `-1` if the target is absent.
+
 ## Rotated Array Search
 A rotated array search uses modified binary search to find a target in an array that has been rotated at some pivot. The algorithm determines which half is normally ordered at each step and narrows the search to the side that must contain the target.
 
