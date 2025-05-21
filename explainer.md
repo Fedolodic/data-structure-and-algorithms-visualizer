@@ -70,3 +70,6 @@ Bit-set or bitmap counting uses bits inside integers to mark whether a value has
 
 ## Bloom Filter
 A Bloom filter is a probabilistic data structure that can quickly test whether a value may be present in a set. Multiple hash functions map each value to positions in a fixed-size bit array. When querying, if any corresponding bit is 0 the value is definitely not in the set; otherwise it is probably present. Bloom filters trade a small chance of false positives for compact storage.
+
+## LRU Cache
+An LRU (Least Recently Used) cache stores a limited number of key-value pairs and evicts the least recently accessed item when capacity is exceeded. A doubly-linked list maintains usage order while a hash map allows O(1) lookups.
