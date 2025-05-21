@@ -29,3 +29,6 @@ This simply runs `node tests/algorithms.test.js` under the hood.
 
 ## Algorithm Explanations
 See `explainer.md` for short overviews of each algorithm implemented so far.
+
+## License
+This project is licensed under the [MIT License](LICENSE).
