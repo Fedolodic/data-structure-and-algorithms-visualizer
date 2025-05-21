@@ -273,6 +273,20 @@ function hashMapTwoSum(arr, target) {
   return false;
 }
 
+// Compute intersection of two arrays using a hash-set
+function hashSetIntersection(arr1, arr2) {
+  const set1 = new Set(arr1);
+  const result = [];
+  const seen = new Set();
+  for (const val of arr2) {
+    if (set1.has(val) && !seen.has(val)) {
+      result.push(val);
+      seen.add(val);
+    }
+  }
+  return result;
+}
+
 module.exports = {
   slidingWindowSubarrays,
   twoPointersSumExists,
@@ -292,4 +306,5 @@ module.exports = {
   sparseTableQuery,
   frequencyMapCounting,
   hashMapTwoSum,
+  hashSetIntersection,
 };

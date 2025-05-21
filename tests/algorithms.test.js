@@ -73,5 +73,15 @@ assert.deepStrictEqual(
   { a:1, b:2, c:3 }
 );
 
+// Hash-set intersection
+assert.deepStrictEqual(
+  algo.hashSetIntersection([1,2,2,3], [2,3,4]),
+  [2,3]
+);
+assert.deepStrictEqual(
+  algo.hashSetIntersection([], [1,2,3]),
+  []
+);
+
 console.log('All tests passed!');
 
