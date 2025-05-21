@@ -53,6 +53,9 @@ assert.strictEqual(algo.manacherLongestPalindrome('racecar'), 'racecar');
 // Cycle sort
 assert.deepStrictEqual(algo.cycleSort([3,1,4,2]), [1,2,3,4]);
 
+// Counting sort
+assert.deepStrictEqual(algo.countingSort([3,1,4,1,2,0,5]), [0,1,1,2,3,4,5]);
+
 // Segment tree range sum
 const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
 assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);

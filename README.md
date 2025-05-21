@@ -2,7 +2,7 @@
 
 This project contains small interactive demos for various data structure and algorithm patterns.
 
-Currently the project includes visualizations for the sliding window, two pointers, prefix sum, run-length encoding, Dutch national flag, rolling hash, Z-algorithm, KMP prefix function, Boyer-Moore majority vote, next greater element, hash map two-sum, hash-set intersection, frequency map counting, Manacher longest palindrome, cycle sort, and segment tree range sum techniques. A small navigation bar lets you switch between demos.
+Currently the project includes visualizations for the sliding window, two pointers, prefix sum, run-length encoding, Dutch national flag, rolling hash, Z-algorithm, KMP prefix function, Boyer-Moore majority vote, next greater element, hash map two-sum, hash-set intersection, frequency map counting, subarray sum equals K, Manacher longest palindrome, cycle sort, counting sort, and segment tree range sum techniques. A small navigation bar lets you switch between demos.
 Short written explanations for these patterns are available in [explainer.md](explainer.md).
 
 ## Running Locally
@@ -11,7 +11,7 @@ No build step is required. Simply open one of the HTML files in `src` in any mod
 
 1. Clone the repository.
 2. Navigate to the project directory.
-3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), `src/rolling_hash.html` (rolling hash), `src/z_algorithm.html` (Z-algorithm), `src/kmp_prefix.html` (KMP prefix function), `src/majority_vote.html` (majority vote), `src/next_greater.html` (next greater element), `src/hash_map_two_sum.html` (hash map two-sum), `src/hash_set_intersection.html` (set intersection), `src/frequency_map.html` (frequency map counting), `src/sparse_table.html` (sparse table), or `src/prefix_sum_hash.html` (subarray sum = K) in your browser.
+3. Open any of `src/index.html` (sliding window), `src/two_pointers.html` (two pointers), `src/prefix_sum.html` (prefix sum), `src/run_length_encoding.html` (run-length encoding), `src/dutch_national_flag.html` (Dutch national flag), `src/rolling_hash.html` (rolling hash), `src/z_algorithm.html` (Z-algorithm), `src/kmp_prefix.html` (KMP prefix function), `src/majority_vote.html` (majority vote), `src/next_greater.html` (next greater element), `src/hash_map_two_sum.html` (hash map two-sum), `src/hash_set_intersection.html` (set intersection), `src/frequency_map.html` (frequency map counting), `src/sparse_table.html` (sparse table), `src/prefix_sum_hash.html` (subarray sum = K), or `src/counting_sort.html` (counting sort) in your browser.
 
 You should see controls to start, pause, and reset the selected visualization.
 
