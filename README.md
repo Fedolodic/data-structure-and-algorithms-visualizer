@@ -19,11 +19,13 @@ Contributions are welcome!
 
 ## Running Tests
 
-Unit tests verify the outputs of the pure algorithm implementations. Run them using Node:
+Unit tests verify the outputs of the pure algorithm implementations. A convenient npm script is provided:
 
 ```bash
-node tests/algorithms.test.js
+npm test
 ```
+
+This simply runs `node tests/algorithms.test.js` under the hood.
 
 ## Algorithm Explanations
 See `explainer.md` for short overviews of each algorithm implemented so far.
