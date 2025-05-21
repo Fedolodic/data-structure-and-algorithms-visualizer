@@ -139,5 +139,9 @@ assert.strictEqual(algo.lowerBound([1,3,5,7], 6), 3);
 assert.strictEqual(algo.upperBound([1,3,5,7], 5), 3);
 assert.strictEqual(algo.upperBound([1,3,5,7], 0), 0);
 
+// Rotated array search
+assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 0), 4);
+assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 3), -1);
+
 console.log('All tests passed!');
 
