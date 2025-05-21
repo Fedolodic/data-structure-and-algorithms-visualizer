@@ -76,7 +76,7 @@ Show animations for:
 ## 6. Binary Search & Divide-Conquer
 Include interactive traces for:
 - ~~B-01 Lower / Upper Bound~~
-- B-02 Rotated Array Search
+- ~~B-02 Rotated Array Search~~
 - B-03 Peak Element
 - B-04 First / Last Occurrence
 - B-05 Median of Two Sorted Arrays

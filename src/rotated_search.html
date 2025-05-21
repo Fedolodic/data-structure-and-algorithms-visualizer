@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Algorithm Visualizer</title>
+  <title>Rotated Array Search Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <a href="prefix_sum.html">Prefix Sum</a> |
     <a href="run_length_encoding.html">Run-Length Encoding</a> |
     <a href="dutch_national_flag.html">Dutch National Flag</a> |
-        <a href="rolling_hash.html">Rolling Hash</a> |
+    <a href="rolling_hash.html">Rolling Hash</a> |
     <a href="z_algorithm.html">Z-Algorithm</a> | <a href="kmp_prefix.html">KMP Prefix</a> |
     <a href="majority_vote.html">Majority Vote</a> |
     <a href="next_greater.html">Next Greater</a> |
@@ -21,15 +21,16 @@
     <a href="frequency_map.html">Frequency Map</a>
     <a href="hash_set_intersection.html">Set Intersection</a> |
     <a href="prefix_sum_hash.html">Subarray Sum = K</a> | <a href="counting_sort.html">Counting Sort</a> | <a href="bucket_sort.html">Bucket Sort</a> | <a href="radix_sort.html">Radix Sort</a> | <a href="interval_merge.html">Interval Merge</a> | <a href="anagram_counter.html">Anagram Search</a> | <a href="bit_set.html">Bit-Set Counting</a> | <a href="bloom_filter.html">Bloom Filter</a> | <a href="binary_search.html">Binary Search</a> | <a href="rotated_search.html">Rotated Search</a>
-    </nav>
-  <h1>Sliding Window Demo</h1>
-  <p>Enter numbers separated by commas and choose a window size.</p>
-  <input id="arrayInput" value="1,2,3,4,5,6,7,8,9" style="width:300px" />
-  <input id="windowSize" type="number" min="1" value="3" />
-  <button id="startBtn">Start</button>
-  <button id="pauseBtn">Pause</button>
-  <button id="resetBtn">Reset</button>
-  <div id="arrayContainer"></div>
-  <script src="script.js"></script>
+  </nav>
+  <h1>Rotated Array Search</h1>
+  <p>Enter numbers for a rotated sorted array and a target value.</p>
+  <input id="rotArrayInput" value="4,5,6,7,0,1,2" style="width:300px" />
+  <input id="rotTarget" type="number" value="0" />
+  <button id="rotStartBtn">Start</button>
+  <button id="rotPauseBtn">Pause</button>
+  <button id="rotResetBtn">Reset</button>
+  <div id="rotInfo" style="margin-top:10px"></div>
+  <div id="rotArrayContainer"></div>
+  <script src="rotated_search.js"></script>
 </body>
 </html>
