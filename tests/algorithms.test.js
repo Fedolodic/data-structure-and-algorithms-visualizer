@@ -1,5 +1,5 @@
 const assert = require('assert');
-const algo = require('../src/algorithms');
+const algo = require('../src/algorithms/index.js');
 
 // Sliding window subarrays
 assert.deepStrictEqual(
