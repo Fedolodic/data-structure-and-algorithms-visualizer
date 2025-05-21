@@ -21,4 +21,16 @@ function reset(state, resetFn) {
   }
 }
 
-window.base = { el, play, pause, reset };
+function loadNav() {
+  const navContainer = document.getElementById('nav');
+  if (!navContainer) return;
+  fetch('../../common/nav.html')
+    .then(res => res.text())
+    .then(html => {
+      navContainer.innerHTML = html;
+    });
+}
+
+document.addEventListener('DOMContentLoaded', loadNav);
+
+window.base = { el, play, pause, reset, loadNav };
