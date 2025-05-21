@@ -58,7 +58,7 @@ Create step-by-step tracers for:
 
 ## 5. Sorting & Greedy
 Show animations for:
-- G-01 Interval Merge
+- ~~G-01 Interval Merge~~
 - G-02 Sweep Line Events
 - G-03 Greedy Exchange (change-making)
 - G-04 Activity Selection

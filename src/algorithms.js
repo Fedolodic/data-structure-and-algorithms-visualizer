@@ -351,6 +351,23 @@ function radixSort(arr) {
   return output;
 }
 
+// Merge overlapping intervals assuming each interval is [start, end]
+function mergeIntervals(intervals) {
+  if (intervals.length === 0) return [];
+  const sorted = intervals.slice().sort((a, b) => a[0] - b[0]);
+  const merged = [sorted[0].slice()];
+  for (let i = 1; i < sorted.length; i++) {
+    const [start, end] = sorted[i];
+    const last = merged[merged.length - 1];
+    if (start <= last[1]) {
+      last[1] = Math.max(last[1], end);
+    } else {
+      merged.push([start, end]);
+    }
+  }
+  return merged;
+}
+
 // Count distinct numbers using a bitmap/bit-set
 function bitmapCountDistinct(arr, maxVal = Math.max(...arr, 0)) {
   const size = maxVal + 1;
@@ -510,6 +527,7 @@ module.exports = {
   bucketSort,
   bitmapCountDistinct,
   countingSort,
+  mergeIntervals,
   radixSort,
   createBloomFilter,
   createLRUCache,
