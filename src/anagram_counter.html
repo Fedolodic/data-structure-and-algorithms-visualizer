@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Frequency Map Demo</title>
+  <title>Anagram Search Demo</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,18 +19,21 @@
     <a href="next_greater.html">Next Greater</a> |
     <a href="sparse_table.html">Sparse Table</a> |
     <a href="hash_map_two_sum.html">Hash Map Two-Sum</a> |
-    <a href="frequency_map.html">Frequency Map</a>
+    <a href="frequency_map.html">Frequency Map</a> |
     <a href="hash_set_intersection.html">Set Intersection</a> |
-    <a href="prefix_sum_hash.html">Subarray Sum = K</a> | <a href="counting_sort.html">Counting Sort</a> | <a href="anagram_counter.html">Anagram Search</a>
+    <a href="prefix_sum_hash.html">Subarray Sum = K</a> |
+    <a href="counting_sort.html">Counting Sort</a> |
+    <a href="anagram_counter.html">Anagram Search</a>
   </nav>
-  <h1>Frequency Map Counting Demo</h1>
-  <p>Enter a string to visualize character frequency counting.</p>
-  <input id="fmInput" value="abbccc" style="width:200px" />
-  <button id="fmStartBtn">Start</button>
-  <button id="fmPauseBtn">Pause</button>
-  <button id="fmResetBtn">Reset</button>
-  <div id="fmTextContainer"></div>
-  <div id="fmMapContainer" style="margin-top:20px"></div>
-  <script src="frequency_map.js"></script>
+  <h1>Sliding Window Anagram Search</h1>
+  <p>Enter a text string and a pattern. The demo highlights a sliding window and detects when it forms an anagram of the pattern.</p>
+  <input id="swcTextInput" value="cbaebabacd" style="width:200px" />
+  <input id="swcPatternInput" value="abc" style="width:100px" />
+  <button id="swcStartBtn">Start</button>
+  <button id="swcPauseBtn">Pause</button>
+  <button id="swcResetBtn">Reset</button>
+  <div id="swcTextContainer"></div>
+  <div id="swcMapContainer" style="margin-top:20px"></div>
+  <script src="anagram_counter.js"></script>
 </body>
 </html>

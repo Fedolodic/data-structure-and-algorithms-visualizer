@@ -90,5 +90,9 @@ assert.deepStrictEqual(
 assert.strictEqual(algo.subarraySumEqualsK([1,2,3], 5), true);
 assert.strictEqual(algo.subarraySumEqualsK([1,2,3], 7), false);
 
+// Sliding window anagram search
+assert.strictEqual(algo.slidingWindowAnagram('cbaebabacd', 'abc'), true);
+assert.strictEqual(algo.slidingWindowAnagram('abcdef', 'gh'), false);
+
 console.log('All tests passed!');
 
