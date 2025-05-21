@@ -65,6 +65,9 @@ Counting sort is efficient for integers in a small range. It counts how many tim
 ## Bucket Sort
 Bucket sort distributes elements into a fixed number of buckets based on value ranges. Each bucket is sorted individually, typically using insertion sort or the native sort, and the buckets are concatenated in order. When the data is uniformly distributed, bucket sort achieves linear time complexity.
 
+## Radix Sort
+Radix sort processes integers digit by digit starting from the least significant position. At each step values are placed into buckets according to the current digit and then collected back in order. Repeating for each digit sorts the entire array in linear time relative to the number of digits.
+
 ## Bit-Set Counting
 Bit-set or bitmap counting uses bits inside integers to mark whether a value has been seen. As numbers are processed, the bit corresponding to each value is set. The total number of distinct values can then be computed by counting the number of set bits. This approach is memory efficient for small ranges and allows constant-time checks.
 
