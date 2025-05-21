@@ -1,10 +1,10 @@
-const dnfArrayInput = document.getElementById('dnfArrayInput');
-const dnfStartBtn = document.getElementById('dnfStartBtn');
-const dnfPauseBtn = document.getElementById('dnfPauseBtn');
-const dnfResetBtn = document.getElementById('dnfResetBtn');
-const dnfArrayContainer = document.getElementById('dnfArrayContainer');
+const dnfArrayInput = base.el('dnfArrayInput');
+const dnfStartBtn = base.el('dnfStartBtn');
+const dnfPauseBtn = base.el('dnfPauseBtn');
+const dnfResetBtn = base.el('dnfResetBtn');
+const dnfArrayContainer = base.el('dnfArrayContainer');
 
-let dnfIntervalId = null;
+const dnfState = { intervalId: null };
 let dnfArr = [];
 let low = 0;
 let mid = 0;
@@ -54,14 +54,11 @@ function dnfStart() {
     high = dnfArr.length - 1;
     dnfRenderArray();
     dnfPause();
-    dnfIntervalId = setInterval(dnfStep, 1000);
+    base.play(dnfState, dnfStep, 1000);
 }
 
 function dnfPause() {
-    if (dnfIntervalId) {
-        clearInterval(dnfIntervalId);
-        dnfIntervalId = null;
-    }
+  base.pause(dnfState);
 }
 
 function dnfReset() {

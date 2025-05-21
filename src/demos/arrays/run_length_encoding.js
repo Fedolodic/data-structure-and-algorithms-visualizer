@@ -1,11 +1,11 @@
-const rleInput = document.getElementById('rleInput');
-const rleStartBtn = document.getElementById('rleStartBtn');
-const rlePauseBtn = document.getElementById('rlePauseBtn');
-const rleResetBtn = document.getElementById('rleResetBtn');
-const rleOriginalContainer = document.getElementById('rleOriginalContainer');
-const rleEncodedContainer = document.getElementById('rleEncodedContainer');
+const rleInput = base.el('rleInput');
+const rleStartBtn = base.el('rleStartBtn');
+const rlePauseBtn = base.el('rlePauseBtn');
+const rleResetBtn = base.el('rleResetBtn');
+const rleOriginalContainer = base.el('rleOriginalContainer');
+const rleEncodedContainer = base.el('rleEncodedContainer');
 
-let rleIntervalId = null;
+const rleState = { intervalId: null };
 let rleIndex = 0;
 let rleStr = '';
 let rleOutput = '';
@@ -49,14 +49,11 @@ function rleStart() {
     rleIndex = 0;
     rleRender();
     rlePause();
-    rleIntervalId = setInterval(rleStep, 800);
+    base.play(rleState, rleStep, 800);
 }
 
 function rlePause() {
-    if (rleIntervalId) {
-        clearInterval(rleIntervalId);
-        rleIntervalId = null;
-    }
+  base.pause(rleState);
 }
 
 function rleReset() {

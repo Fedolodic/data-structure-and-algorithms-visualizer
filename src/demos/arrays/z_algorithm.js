@@ -1,11 +1,11 @@
-const zInput = document.getElementById('zInput');
-const zStartBtn = document.getElementById('zStartBtn');
-const zPauseBtn = document.getElementById('zPauseBtn');
-const zResetBtn = document.getElementById('zResetBtn');
-const zStringContainer = document.getElementById('zStringContainer');
-const zValuesContainer = document.getElementById('zValuesContainer');
+const zInput = base.el('zInput');
+const zStartBtn = base.el('zStartBtn');
+const zPauseBtn = base.el('zPauseBtn');
+const zResetBtn = base.el('zResetBtn');
+const zStringContainer = base.el('zStringContainer');
+const zValuesContainer = base.el('zValuesContainer');
 
-let zIntervalId = null;
+const zState = { intervalId: null };
 let zStr = '';
 let zArr = [];
 let zL = 0;
@@ -59,14 +59,11 @@ function zStart() {
     zIndex = 1;
     zRender();
     zPause();
-    zIntervalId = setInterval(zStep, 800);
+    base.play(zState, zStep, 800);
 }
 
 function zPause() {
-    if (zIntervalId) {
-        clearInterval(zIntervalId);
-        zIntervalId = null;
-    }
+  base.pause(zState);
 }
 
 function zReset() {

@@ -1,12 +1,12 @@
-const rhTextInput = document.getElementById('rhTextInput');
-const rhPatternInput = document.getElementById('rhPatternInput');
-const rhStartBtn = document.getElementById('rhStartBtn');
-const rhPauseBtn = document.getElementById('rhPauseBtn');
-const rhResetBtn = document.getElementById('rhResetBtn');
-const rhTextContainer = document.getElementById('rhTextContainer');
-const rhPatternContainer = document.getElementById('rhPatternContainer');
+const rhTextInput = base.el('rhTextInput');
+const rhPatternInput = base.el('rhPatternInput');
+const rhStartBtn = base.el('rhStartBtn');
+const rhPauseBtn = base.el('rhPauseBtn');
+const rhResetBtn = base.el('rhResetBtn');
+const rhTextContainer = base.el('rhTextContainer');
+const rhPatternContainer = base.el('rhPatternContainer');
 
-let rhIntervalId = null;
+const rhState = { intervalId: null };
 let rhText = '';
 let rhPattern = '';
 let rhIndex = 0;
@@ -80,14 +80,11 @@ function rhStart() {
     rhMatch = false;
     rhRender();
     rhPause();
-    rhIntervalId = setInterval(rhStep, 800);
+    base.play(rhState, rhStep, 800);
 }
 
 function rhPause() {
-    if (rhIntervalId) {
-        clearInterval(rhIntervalId);
-        rhIntervalId = null;
-    }
+  base.pause(rhState);
 }
 
 function rhReset() {

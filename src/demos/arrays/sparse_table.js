@@ -1,13 +1,13 @@
-const stArrayInput = document.getElementById('stArrayInput');
-const stLeftInput = document.getElementById('stLeft');
-const stRightInput = document.getElementById('stRight');
-const stStartBtn = document.getElementById('stStartBtn');
-const stPauseBtn = document.getElementById('stPauseBtn');
-const stResetBtn = document.getElementById('stResetBtn');
-const stArrayContainer = document.getElementById('stArrayContainer');
-const stResultContainer = document.getElementById('stResultContainer');
+const stArrayInput = base.el('stArrayInput');
+const stLeftInput = base.el('stLeft');
+const stRightInput = base.el('stRight');
+const stStartBtn = base.el('stStartBtn');
+const stPauseBtn = base.el('stPauseBtn');
+const stResetBtn = base.el('stResetBtn');
+const stArrayContainer = base.el('stArrayContainer');
+const stResultContainer = base.el('stResultContainer');
 
-let stIntervalId = null;
+const stState = { intervalId: null };
 let stArr = [];
 let stTable = null;
 let stL = 0;
@@ -66,14 +66,11 @@ function stStart() {
     stStepIndex = 0;
     stRender();
     stPause();
-    stIntervalId = setInterval(stStep, 1000);
+    base.play(stState, stStep, 1000);
 }
 
 function stPause() {
-    if (stIntervalId) {
-        clearInterval(stIntervalId);
-        stIntervalId = null;
-    }
+  base.pause(stState);
 }
 
 function stReset() {

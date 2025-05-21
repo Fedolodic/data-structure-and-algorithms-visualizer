@@ -1,11 +1,11 @@
-const bsArrayInput = document.getElementById('bsArrayInput');
-const bsStartBtn = document.getElementById('bsStartBtn');
-const bsPauseBtn = document.getElementById('bsPauseBtn');
-const bsResetBtn = document.getElementById('bsResetBtn');
-const bsArrayContainer = document.getElementById('bsArrayContainer');
-const bsBitContainer = document.getElementById('bsBitContainer');
+const bsArrayInput = base.el('bsArrayInput');
+const bsStartBtn = base.el('bsStartBtn');
+const bsPauseBtn = base.el('bsPauseBtn');
+const bsResetBtn = base.el('bsResetBtn');
+const bsArrayContainer = base.el('bsArrayContainer');
+const bsBitContainer = base.el('bsBitContainer');
 
-let bsIntervalId = null;
+const bsState = { intervalId: null };
 let bsIndex = 0;
 let bsArr = [];
 const BS_MAX = 15;
@@ -52,14 +52,11 @@ function bsStart() {
   bsIndex = 0;
   bsRender();
   bsPause();
-  bsIntervalId = setInterval(bsStep, 800);
+  base.play(bsState, bsStep, 800);
 }
 
 function bsPause() {
-  if (bsIntervalId) {
-    clearInterval(bsIntervalId);
-    bsIntervalId = null;
-  }
+  base.pause(bsState);
 }
 
 function bsReset() {

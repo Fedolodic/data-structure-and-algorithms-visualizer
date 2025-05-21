@@ -1,12 +1,12 @@
-const rsArrayInput = document.getElementById('rsArrayInput');
-const rsStartBtn = document.getElementById('rsStartBtn');
-const rsPauseBtn = document.getElementById('rsPauseBtn');
-const rsResetBtn = document.getElementById('rsResetBtn');
-const rsArrayContainer = document.getElementById('rsArrayContainer');
-const rsBucketsContainer = document.getElementById('rsBucketsContainer');
-const rsPseudo = document.getElementById('rsPseudo');
+const rsArrayInput = base.el('rsArrayInput');
+const rsStartBtn = base.el('rsStartBtn');
+const rsPauseBtn = base.el('rsPauseBtn');
+const rsResetBtn = base.el('rsResetBtn');
+const rsArrayContainer = base.el('rsArrayContainer');
+const rsBucketsContainer = base.el('rsBucketsContainer');
+const rsPseudo = base.el('rsPseudo');
 
-let rsIntervalId = null;
+const rsState = { intervalId: null };
 let rsIndex = 0;
 let rsArr = [];
 let rsBuckets = [];
@@ -66,14 +66,11 @@ function rsStart() {
   rsExp = 1;
   rsRender();
   rsPause();
-  rsIntervalId = setInterval(rsStep, 800);
+  base.play(rsState, rsStep, 800);
 }
 
 function rsPause() {
-  if (rsIntervalId) {
-    clearInterval(rsIntervalId);
-    rsIntervalId = null;
-  }
+  base.pause(rsState);
 }
 
 function rsReset() {

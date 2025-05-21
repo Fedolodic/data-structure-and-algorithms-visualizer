@@ -1,11 +1,11 @@
-const mvArrayInput = document.getElementById('mvArrayInput');
-const mvStartBtn = document.getElementById('mvStartBtn');
-const mvPauseBtn = document.getElementById('mvPauseBtn');
-const mvResetBtn = document.getElementById('mvResetBtn');
-const mvArrayContainer = document.getElementById('mvArrayContainer');
-const mvCandidateDisplay = document.getElementById('mvCandidateDisplay');
+const mvArrayInput = base.el('mvArrayInput');
+const mvStartBtn = base.el('mvStartBtn');
+const mvPauseBtn = base.el('mvPauseBtn');
+const mvResetBtn = base.el('mvResetBtn');
+const mvArrayContainer = base.el('mvArrayContainer');
+const mvCandidateDisplay = base.el('mvCandidateDisplay');
 
-let mvIntervalId = null;
+const mvState = { intervalId: null };
 let mvIndex = 0;
 let mvArr = [];
 let candidate = null;
@@ -49,14 +49,11 @@ function mvStart() {
     count = 0;
     mvRender();
     mvPause();
-    mvIntervalId = setInterval(mvStep, 1000);
+    base.play(mvState, mvStep, 1000);
 }
 
 function mvPause() {
-    if (mvIntervalId) {
-        clearInterval(mvIntervalId);
-        mvIntervalId = null;
-    }
+  base.pause(mvState);
 }
 
 function mvReset() {

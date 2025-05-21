@@ -1,13 +1,13 @@
-const hsiArray1Input = document.getElementById('hsiArray1Input');
-const hsiArray2Input = document.getElementById('hsiArray2Input');
-const hsiStartBtn = document.getElementById('hsiStartBtn');
-const hsiPauseBtn = document.getElementById('hsiPauseBtn');
-const hsiResetBtn = document.getElementById('hsiResetBtn');
-const hsiArray1Container = document.getElementById('hsiArray1Container');
-const hsiArray2Container = document.getElementById('hsiArray2Container');
-const hsiResultContainer = document.getElementById('hsiResultContainer');
+const hsiArray1Input = base.el('hsiArray1Input');
+const hsiArray2Input = base.el('hsiArray2Input');
+const hsiStartBtn = base.el('hsiStartBtn');
+const hsiPauseBtn = base.el('hsiPauseBtn');
+const hsiResetBtn = base.el('hsiResetBtn');
+const hsiArray1Container = base.el('hsiArray1Container');
+const hsiArray2Container = base.el('hsiArray2Container');
+const hsiResultContainer = base.el('hsiResultContainer');
 
-let hsiIntervalId = null;
+const hsiState = { intervalId: null };
 let hsiIndex = 0;
 let hsiArr1 = [];
 let hsiArr2 = [];
@@ -69,14 +69,11 @@ function hsiStart() {
   hsiIndex = 0;
   hsiRender();
   hsiPause();
-  hsiIntervalId = setInterval(hsiStep, 800);
+  base.play(hsiState, hsiStep, 800);
 }
 
 function hsiPause() {
-  if (hsiIntervalId) {
-    clearInterval(hsiIntervalId);
-    hsiIntervalId = null;
-  }
+  base.pause(hsiState);
 }
 
 function hsiReset() {

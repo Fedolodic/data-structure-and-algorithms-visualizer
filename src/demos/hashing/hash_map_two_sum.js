@@ -1,12 +1,12 @@
-const hmtsArrayInput = document.getElementById('hmtsArrayInput');
-const hmtsTargetInput = document.getElementById('hmtsTarget');
-const hmtsStartBtn = document.getElementById('hmtsStartBtn');
-const hmtsPauseBtn = document.getElementById('hmtsPauseBtn');
-const hmtsResetBtn = document.getElementById('hmtsResetBtn');
-const hmtsArrayContainer = document.getElementById('hmtsArrayContainer');
-const hmtsSeenContainer = document.getElementById('hmtsSeenContainer');
+const hmtsArrayInput = base.el('hmtsArrayInput');
+const hmtsTargetInput = base.el('hmtsTarget');
+const hmtsStartBtn = base.el('hmtsStartBtn');
+const hmtsPauseBtn = base.el('hmtsPauseBtn');
+const hmtsResetBtn = base.el('hmtsResetBtn');
+const hmtsArrayContainer = base.el('hmtsArrayContainer');
+const hmtsSeenContainer = base.el('hmtsSeenContainer');
 
-let hmtsIntervalId = null;
+const hmtsState = { intervalId: null };
 let hmtsIndex = 0;
 let hmtsArr = [];
 let hmtsTarget = 0;
@@ -60,14 +60,11 @@ function hmtsStart() {
     hmtsFoundPair = null;
     hmtsRender();
     hmtsPause();
-    hmtsIntervalId = setInterval(hmtsStep, 800);
+    base.play(hmtsState, hmtsStep, 800);
 }
 
 function hmtsPause() {
-    if (hmtsIntervalId) {
-        clearInterval(hmtsIntervalId);
-        hmtsIntervalId = null;
-    }
+  base.pause(hmtsState);
 }
 
 function hmtsReset() {

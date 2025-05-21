@@ -1,12 +1,12 @@
-const bsArrayInput = document.getElementById('bsArrayInput');
-const bsStartBtn = document.getElementById('bsStartBtn');
-const bsPauseBtn = document.getElementById('bsPauseBtn');
-const bsResetBtn = document.getElementById('bsResetBtn');
-const bsArrayContainer = document.getElementById('bsArrayContainer');
-const bsBucketsContainer = document.getElementById('bsBucketsContainer');
-const bsOutputContainer = document.getElementById('bsOutputContainer');
+const bsArrayInput = base.el('bsArrayInput');
+const bsStartBtn = base.el('bsStartBtn');
+const bsPauseBtn = base.el('bsPauseBtn');
+const bsResetBtn = base.el('bsResetBtn');
+const bsArrayContainer = base.el('bsArrayContainer');
+const bsBucketsContainer = base.el('bsBucketsContainer');
+const bsOutputContainer = base.el('bsOutputContainer');
 
-let bsIntervalId = null;
+const bsState = { intervalId: null };
 let bsIndex = 0;
 let bsArr = [];
 let bsBuckets = [];
@@ -67,14 +67,11 @@ function bsStart() {
   bsIndex = 0;
   bsRender();
   bsPause();
-  bsIntervalId = setInterval(bsStep, 800);
+  base.play(bsState, bsStep, 800);
 }
 
 function bsPause() {
-  if (bsIntervalId) {
-    clearInterval(bsIntervalId);
-    bsIntervalId = null;
-  }
+  base.pause(bsState);
 }
 
 function bsReset() {

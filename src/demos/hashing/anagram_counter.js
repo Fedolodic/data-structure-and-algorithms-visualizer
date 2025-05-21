@@ -1,12 +1,12 @@
-const swcTextInput = document.getElementById('swcTextInput');
-const swcPatternInput = document.getElementById('swcPatternInput');
-const swcStartBtn = document.getElementById('swcStartBtn');
-const swcPauseBtn = document.getElementById('swcPauseBtn');
-const swcResetBtn = document.getElementById('swcResetBtn');
-const swcTextContainer = document.getElementById('swcTextContainer');
-const swcMapContainer = document.getElementById('swcMapContainer');
+const swcTextInput = base.el('swcTextInput');
+const swcPatternInput = base.el('swcPatternInput');
+const swcStartBtn = base.el('swcStartBtn');
+const swcPauseBtn = base.el('swcPauseBtn');
+const swcResetBtn = base.el('swcResetBtn');
+const swcTextContainer = base.el('swcTextContainer');
+const swcMapContainer = base.el('swcMapContainer');
 
-let swcIntervalId = null;
+const swcState = { intervalId: null };
 let swcIndex = 0;
 let swcText = '';
 let swcPattern = '';
@@ -75,14 +75,11 @@ function swcStart() {
   swcFound = false;
   swcRender();
   swcPause();
-  swcIntervalId = setInterval(swcStep, 800);
+  base.play(swcState, swcStep, 800);
 }
 
 function swcPause() {
-  if (swcIntervalId) {
-    clearInterval(swcIntervalId);
-    swcIntervalId = null;
-  }
+  base.pause(swcState);
 }
 
 function swcReset() {

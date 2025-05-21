@@ -1,12 +1,12 @@
-const ngeArrayInput = document.getElementById('ngeArrayInput');
-const ngeStartBtn = document.getElementById('ngeStartBtn');
-const ngePauseBtn = document.getElementById('ngePauseBtn');
-const ngeResetBtn = document.getElementById('ngeResetBtn');
-const ngeArrayContainer = document.getElementById('ngeArrayContainer');
-const ngeStackContainer = document.getElementById('ngeStackContainer');
-const ngeResultContainer = document.getElementById('ngeResultContainer');
+const ngeArrayInput = base.el('ngeArrayInput');
+const ngeStartBtn = base.el('ngeStartBtn');
+const ngePauseBtn = base.el('ngePauseBtn');
+const ngeResetBtn = base.el('ngeResetBtn');
+const ngeArrayContainer = base.el('ngeArrayContainer');
+const ngeStackContainer = base.el('ngeStackContainer');
+const ngeResultContainer = base.el('ngeResultContainer');
 
-let ngeIntervalId = null;
+const ngeState = { intervalId: null };
 let ngeArr = [];
 let ngeStack = [];
 let ngeRes = [];
@@ -59,14 +59,11 @@ function ngeStart() {
     ngeIndex = ngeArr.length - 1;
     ngeRender();
     ngePause();
-    ngeIntervalId = setInterval(ngeStep, 800);
+    base.play(ngeState, ngeStep, 800);
 }
 
 function ngePause() {
-    if (ngeIntervalId) {
-        clearInterval(ngeIntervalId);
-        ngeIntervalId = null;
-    }
+  base.pause(ngeState);
 }
 
 function ngeReset() {

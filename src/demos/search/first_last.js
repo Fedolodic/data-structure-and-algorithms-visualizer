@@ -1,10 +1,10 @@
-const flArrayInput = document.getElementById('flArrayInput');
-const flTargetInput = document.getElementById('flTarget');
-const flStartBtn = document.getElementById('flStartBtn');
-const flPauseBtn = document.getElementById('flPauseBtn');
-const flResetBtn = document.getElementById('flResetBtn');
-const flArrayContainer = document.getElementById('flArrayContainer');
-const flInfo = document.getElementById('flInfo');
+const flArrayInput = base.el('flArrayInput');
+const flTargetInput = base.el('flTarget');
+const flStartBtn = base.el('flStartBtn');
+const flPauseBtn = base.el('flPauseBtn');
+const flResetBtn = base.el('flResetBtn');
+const flArrayContainer = base.el('flArrayContainer');
+const flInfo = base.el('flInfo');
 
 let arr = [];
 let target = 0;
@@ -14,7 +14,7 @@ let mid = 0;
 let phase = 'first';
 let first = -1;
 let last = -1;
-let flIntervalId = null;
+const flState = { intervalId: null };
 
 function render() {
   flArrayContainer.innerHTML = '';
@@ -80,14 +80,11 @@ function start() {
   phase = 'first';
   render();
   pause();
-  if (arr.length > 0) flIntervalId = setInterval(step, 1000);
+  if (arr.length > 0) base.play(flState, step, 1000);
 }
 
 function pause() {
-  if (flIntervalId) {
-    clearInterval(flIntervalId);
-    flIntervalId = null;
-  }
+  base.pause(flState);
 }
 
 function reset() {

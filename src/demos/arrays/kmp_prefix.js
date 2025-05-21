@@ -1,11 +1,11 @@
-const kmpInput = document.getElementById('kmpInput');
-const kmpStartBtn = document.getElementById('kmpStartBtn');
-const kmpPauseBtn = document.getElementById('kmpPauseBtn');
-const kmpResetBtn = document.getElementById('kmpResetBtn');
-const kmpStringContainer = document.getElementById('kmpStringContainer');
-const kmpValuesContainer = document.getElementById('kmpValuesContainer');
+const kmpInput = base.el('kmpInput');
+const kmpStartBtn = base.el('kmpStartBtn');
+const kmpPauseBtn = base.el('kmpPauseBtn');
+const kmpResetBtn = base.el('kmpResetBtn');
+const kmpStringContainer = base.el('kmpStringContainer');
+const kmpValuesContainer = base.el('kmpValuesContainer');
 
-let kmpIntervalId = null;
+const kmpState = { intervalId: null };
 let kmpStr = '';
 let kmpPi = [];
 let kmpIndex = 1;
@@ -52,14 +52,11 @@ function kmpStart() {
     kmpJ = 0;
     kmpRender();
     kmpPause();
-    kmpIntervalId = setInterval(kmpStep, 800);
+    base.play(kmpState, kmpStep, 800);
 }
 
 function kmpPause() {
-    if (kmpIntervalId) {
-        clearInterval(kmpIntervalId);
-        kmpIntervalId = null;
-    }
+  base.pause(kmpState);
 }
 
 function kmpReset() {

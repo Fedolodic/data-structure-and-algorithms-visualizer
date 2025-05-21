@@ -1,9 +1,9 @@
-const bfAddInput = document.getElementById('bfAddInput');
-const bfQueryInput = document.getElementById('bfQueryInput');
-const bfAddBtn = document.getElementById('bfAddBtn');
-const bfQueryBtn = document.getElementById('bfQueryBtn');
-const bfResult = document.getElementById('bfResult');
-const bfBits = document.getElementById('bfBits');
+const bfAddInput = base.el('bfAddInput');
+const bfQueryInput = base.el('bfQueryInput');
+const bfAddBtn = base.el('bfAddBtn');
+const bfQueryBtn = base.el('bfQueryBtn');
+const bfResult = base.el('bfResult');
+const bfBits = base.el('bfBits');
 
 const SIZE = 16;
 const HASHES = 3;

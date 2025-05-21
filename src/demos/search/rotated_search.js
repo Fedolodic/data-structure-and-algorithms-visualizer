@@ -1,17 +1,17 @@
-const rotArrayInput = document.getElementById('rotArrayInput');
-const rotTargetInput = document.getElementById('rotTarget');
-const rotStartBtn = document.getElementById('rotStartBtn');
-const rotPauseBtn = document.getElementById('rotPauseBtn');
-const rotResetBtn = document.getElementById('rotResetBtn');
-const rotArrayContainer = document.getElementById('rotArrayContainer');
-const rotInfo = document.getElementById('rotInfo');
+const rotArrayInput = base.el('rotArrayInput');
+const rotTargetInput = base.el('rotTarget');
+const rotStartBtn = base.el('rotStartBtn');
+const rotPauseBtn = base.el('rotPauseBtn');
+const rotResetBtn = base.el('rotResetBtn');
+const rotArrayContainer = base.el('rotArrayContainer');
+const rotInfo = base.el('rotInfo');
 
 let rotArr = [];
 let rotTarget = 0;
 let rotLow = 0;
 let rotHigh = 0;
 let rotMid = 0;
-let rotIntervalId = null;
+const rotState = { intervalId: null };
 let rotFound = false;
 
 function rotRender() {
@@ -71,14 +71,11 @@ function rotStart() {
   rotFound = false;
   rotRender();
   rotPause();
-  rotIntervalId = setInterval(rotStep, 1000);
+  base.play(rotState, rotStep, 1000);
 }
 
 function rotPause() {
-  if (rotIntervalId) {
-    clearInterval(rotIntervalId);
-    rotIntervalId = null;
-  }
+  base.pause(rotState);
 }
 
 function rotReset() {
