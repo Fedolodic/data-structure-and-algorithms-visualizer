@@ -85,3 +85,9 @@ Binary search can locate the position where a target should be inserted in a sor
 
 ## Rotated Array Search
 A rotated array search uses modified binary search to find a target in an array that has been rotated at some pivot. The algorithm determines which half is normally ordered at each step and narrows the search to the side that must contain the target.
+
+## Peak Element Search
+A peak element in an array is one that is greater than its immediate neighbors.
+By comparing the middle of the search range with its right neighbor we can
+discard half the array each step. When the window narrows to a single index
+we have found a local maximum.
