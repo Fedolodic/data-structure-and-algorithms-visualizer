@@ -79,3 +79,6 @@ An LRU (Least Recently Used) cache stores a limited number of key-value pairs an
 
 ## Interval Merge
 The interval merge algorithm combines overlapping intervals into a minimal set of non-overlapping ranges. Intervals are first sorted by start position. Then each interval is compared to the last merged range and either merged if overlapping or appended as a new range.
+
+## Binary Search Lower/Upper Bound
+Binary search can locate the position where a target should be inserted in a sorted array. The lower bound returns the first index whose value is greater than or equal to the target, while the upper bound returns the first index with a value strictly greater than the target. Both variants repeatedly split the search range in half until the position is determined.

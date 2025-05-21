@@ -133,5 +133,11 @@ lru.put(3, 'c'); // evicts key 2
 assert.strictEqual(lru.get(2), null);
 assert.deepStrictEqual(lru.entries(), [[1,'a'], [3,'c']]);
 
+// Lower and upper bound
+assert.strictEqual(algo.lowerBound([1,3,5,7], 5), 2);
+assert.strictEqual(algo.lowerBound([1,3,5,7], 6), 3);
+assert.strictEqual(algo.upperBound([1,3,5,7], 5), 3);
+assert.strictEqual(algo.upperBound([1,3,5,7], 0), 0);
+
 console.log('All tests passed!');
 
