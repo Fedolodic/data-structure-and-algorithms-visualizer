@@ -68,6 +68,10 @@ Bucket sort distributes elements into a fixed number of buckets based on value r
 ## Radix Sort
 Radix sort processes integers digit by digit starting from the least significant position. At each step values are placed into buckets according to the current digit and then collected back in order. Repeating for each digit sorts the entire array in linear time relative to the number of digits.
 
+## Merge Sort
+Merge sort recursively divides the array into halves, sorts each half, and then merges the sorted halves back together. The merging step combines two already sorted lists by repeatedly taking the smaller front element. This algorithm runs in `O(n log n)` time and is stable but requires additional space for merging.
+
+
 ## Bit-Set Counting
 Bit-set or bitmap counting uses bits inside integers to mark whether a value has been seen. As numbers are processed, the bit corresponding to each value is set. The total number of distinct values can then be computed by counting the number of set bits. This approach is memory efficient for small ranges and allows constant-time checks.
 

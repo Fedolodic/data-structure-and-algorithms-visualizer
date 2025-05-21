@@ -86,7 +86,7 @@ Include interactive traces for:
 - B-09 Ternary Search (unimodal)
 - B-10 Binary Search on Answer (parametric)
 - B-11 Quick-Select (Hoare / Lomuto)
-- B-12 Merge Sort
+ - ~~B-12 Merge Sort~~
 - B-13 Divide-Conquer Max Subarray
 - B-14 Fast Fourier Transform (FFT)
 

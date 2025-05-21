@@ -74,6 +74,13 @@ assert.deepStrictEqual(
   [2, 24, 45, 66, 75, 90, 170, 802]
 );
 
+// Merge sort
+assert.deepStrictEqual(
+  algo.mergeSort([5,1,4,2,8]),
+  [1,2,4,5,8]
+);
+assert.deepStrictEqual(algo.mergeSort([]), []);
+
 // Segment tree range sum
 const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
 assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);
