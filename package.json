@@ -1,0 +1,7 @@
+{
+  "name": "data-structure-and-algorithms-visualizer",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node tests/algorithms.test.js"
+  }
+}
