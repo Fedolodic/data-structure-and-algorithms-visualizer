@@ -67,3 +67,6 @@ Bucket sort distributes elements into a fixed number of buckets based on value r
 
 ## Bit-Set Counting
 Bit-set or bitmap counting uses bits inside integers to mark whether a value has been seen. As numbers are processed, the bit corresponding to each value is set. The total number of distinct values can then be computed by counting the number of set bits. This approach is memory efficient for small ranges and allows constant-time checks.
+
+## Bloom Filter
+A Bloom filter is a probabilistic data structure that can quickly test whether a value may be present in a set. Multiple hash functions map each value to positions in a fixed-size bit array. When querying, if any corresponding bit is 0 the value is definitely not in the set; otherwise it is probably present. Bloom filters trade a small chance of false positives for compact storage.

@@ -32,7 +32,7 @@ Add visualizations for:
 - ~~H-04 Hash-Map Two-Sum~~
 - ~~H-05 Prefix-Sum + Hash (subarray = K)~~
 - ~~H-06 Sliding Window w/ Counter (anagram)~~
-- H-07 Bloom Filter
+- ~~H-07 Bloom Filter~~
 - H-08 Cuckoo Hashing
 - H-09 LRU Cache (hash + linked-list)
 - ~~H-10 Counting Sort~~
