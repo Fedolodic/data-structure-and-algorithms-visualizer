@@ -143,5 +143,10 @@ assert.strictEqual(algo.upperBound([1,3,5,7], 0), 0);
 assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 0), 4);
 assert.strictEqual(algo.rotatedArraySearch([4,5,6,7,0,1,2], 3), -1);
 
+// Peak element search
+assert.strictEqual(algo.findPeakElement([1,2,3,1]), 2);
+const peakIdx = algo.findPeakElement([1,2,1,3,5,6,4]);
+assert.ok([1,5].includes(peakIdx));
+
 console.log('All tests passed!');
 

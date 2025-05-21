@@ -95,6 +95,21 @@ function rabinKarp(text, pattern) {
   return -1;
 }
 
+// Find a peak element index using binary search
+function findPeakElement(arr) {
+  let l = 0,
+    r = arr.length - 1;
+  while (l < r) {
+    const m = Math.floor((l + r) / 2);
+    if (arr[m] < arr[m + 1]) {
+      l = m + 1;
+    } else {
+      r = m;
+    }
+  }
+  return l;
+}
+
 function zAlgorithm(s) {
   const n = s.length;
   const z = new Array(n).fill(0);
@@ -576,6 +591,7 @@ module.exports = {
   createLRUCache,
   lowerBound,
   upperBound,
+  findPeakElement,
   rotatedArraySearch,
   slidingWindowAnagram,
 };
