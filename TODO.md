@@ -36,7 +36,7 @@ Add visualizations for:
 - H-08 Cuckoo Hashing
 - H-09 LRU Cache (hash + linked-list)
 - ~~H-10 Counting Sort~~
-- H-11 Bucket Sort
+- ~~H-11 Bucket Sort~~
 - H-12 Bit-Set / Bitmap Counting
 
 ## 4. Recursion & Backtracking

@@ -61,3 +61,6 @@ Sliding window anagram search maintains character counts for a moving window of 
 
 ## Counting Sort
 Counting sort is efficient for integers in a small range. It counts how many times each value appears and then emits values in order based on those counts. The algorithm runs in O(n + k) time for `n` elements and range size `k`.
+
+## Bucket Sort
+Bucket sort distributes elements into a fixed number of buckets based on value ranges. Each bucket is sorted individually, typically using insertion sort or the native sort, and the buckets are concatenated in order. When the data is uniformly distributed, bucket sort achieves linear time complexity.
