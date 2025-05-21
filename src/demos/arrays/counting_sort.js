@@ -1,12 +1,12 @@
-const csArrayInput = document.getElementById('csArrayInput');
-const csStartBtn = document.getElementById('csStartBtn');
-const csPauseBtn = document.getElementById('csPauseBtn');
-const csResetBtn = document.getElementById('csResetBtn');
-const csArrayContainer = document.getElementById('csArrayContainer');
-const csCountContainer = document.getElementById('csCountContainer');
-const csOutputContainer = document.getElementById('csOutputContainer');
+const csArrayInput = base.el('csArrayInput');
+const csStartBtn = base.el('csStartBtn');
+const csPauseBtn = base.el('csPauseBtn');
+const csResetBtn = base.el('csResetBtn');
+const csArrayContainer = base.el('csArrayContainer');
+const csCountContainer = base.el('csCountContainer');
+const csOutputContainer = base.el('csOutputContainer');
 
-let csIntervalId = null;
+const csState = { intervalId: null };
 let csIndex = 0;
 let csArr = [];
 let csCounts = [];
@@ -69,14 +69,11 @@ function csStart() {
   csIndex = 0;
   csRender();
   csPause();
-  csIntervalId = setInterval(csStep, 800);
+  base.play(csState, csStep, 800);
 }
 
 function csPause() {
-  if (csIntervalId) {
-    clearInterval(csIntervalId);
-    csIntervalId = null;
-  }
+  base.pause(csState);
 }
 
 function csReset() {

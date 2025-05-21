@@ -1,13 +1,13 @@
-const pshArrayInput = document.getElementById('pshArrayInput');
-const pshTargetInput = document.getElementById('pshTarget');
-const pshStartBtn = document.getElementById('pshStartBtn');
-const pshPauseBtn = document.getElementById('pshPauseBtn');
-const pshResetBtn = document.getElementById('pshResetBtn');
-const pshArrayContainer = document.getElementById('pshArrayContainer');
-const pshPrefixContainer = document.getElementById('pshPrefixContainer');
-const pshMapContainer = document.getElementById('pshMapContainer');
+const pshArrayInput = base.el('pshArrayInput');
+const pshTargetInput = base.el('pshTarget');
+const pshStartBtn = base.el('pshStartBtn');
+const pshPauseBtn = base.el('pshPauseBtn');
+const pshResetBtn = base.el('pshResetBtn');
+const pshArrayContainer = base.el('pshArrayContainer');
+const pshPrefixContainer = base.el('pshPrefixContainer');
+const pshMapContainer = base.el('pshMapContainer');
 
-let pshIntervalId = null;
+const pshState = { intervalId: null };
 let pshIndex = 0;
 let pshArr = [];
 let pshTarget = 0;
@@ -63,14 +63,11 @@ function pshStart() {
   pshFound = false;
   pshRender();
   pshPause();
-  pshIntervalId = setInterval(pshStep, 800);
+  base.play(pshState, pshStep, 800);
 }
 
 function pshPause() {
-  if (pshIntervalId) {
-    clearInterval(pshIntervalId);
-    pshIntervalId = null;
-  }
+  base.pause(pshState);
 }
 
 function pshReset() {

@@ -1,12 +1,12 @@
-const lruOpsInput = document.getElementById('lruOpsInput');
-const lruCapInput = document.getElementById('lruCapInput');
-const lruStartBtn = document.getElementById('lruStartBtn');
-const lruPauseBtn = document.getElementById('lruPauseBtn');
-const lruResetBtn = document.getElementById('lruResetBtn');
-const lruCacheContainer = document.getElementById('lruCacheContainer');
-const lruOpInfo = document.getElementById('lruOpInfo');
+const lruOpsInput = base.el('lruOpsInput');
+const lruCapInput = base.el('lruCapInput');
+const lruStartBtn = base.el('lruStartBtn');
+const lruPauseBtn = base.el('lruPauseBtn');
+const lruResetBtn = base.el('lruResetBtn');
+const lruCacheContainer = base.el('lruCacheContainer');
+const lruOpInfo = base.el('lruOpInfo');
 
-let lruIntervalId = null;
+const lruState = { intervalId: null };
 let lruIndex = 0;
 let lruOps = [];
 let lruCache = null;
@@ -116,14 +116,11 @@ function lruStart() {
   lruIndex = 0;
   lruRender();
   lruPause();
-  lruIntervalId = setInterval(lruStep, 800);
+  base.play(lruState, lruStep, 800);
 }
 
 function lruPause() {
-  if (lruIntervalId) {
-    clearInterval(lruIntervalId);
-    lruIntervalId = null;
-  }
+  base.pause(lruState);
 }
 
 function lruReset() {

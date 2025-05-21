@@ -1,15 +1,15 @@
-const peArrayInput = document.getElementById('peArrayInput');
-const peStartBtn = document.getElementById('peStartBtn');
-const pePauseBtn = document.getElementById('pePauseBtn');
-const peResetBtn = document.getElementById('peResetBtn');
-const peArrayContainer = document.getElementById('peArrayContainer');
-const peInfo = document.getElementById('peInfo');
+const peArrayInput = base.el('peArrayInput');
+const peStartBtn = base.el('peStartBtn');
+const pePauseBtn = base.el('pePauseBtn');
+const peResetBtn = base.el('peResetBtn');
+const peArrayContainer = base.el('peArrayContainer');
+const peInfo = base.el('peInfo');
 
 let peArr = [];
 let peLow = 0;
 let peHigh = 0;
 let peMid = 0;
-let peIntervalId = null;
+const peState = { intervalId: null };
 
 function peRender() {
   peArrayContainer.innerHTML = '';
@@ -50,14 +50,11 @@ function peStart() {
   peMid = 0;
   peRender();
   pePause();
-  peIntervalId = setInterval(peStep, 1000);
+  base.play(peState, peStep, 1000);
 }
 
 function pePause() {
-  if (peIntervalId) {
-    clearInterval(peIntervalId);
-    peIntervalId = null;
-  }
+  base.pause(peState);
 }
 
 function peReset() {

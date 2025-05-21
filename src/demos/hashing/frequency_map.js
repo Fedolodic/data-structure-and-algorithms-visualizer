@@ -1,11 +1,11 @@
-const fmInput = document.getElementById('fmInput');
-const fmStartBtn = document.getElementById('fmStartBtn');
-const fmPauseBtn = document.getElementById('fmPauseBtn');
-const fmResetBtn = document.getElementById('fmResetBtn');
-const fmTextContainer = document.getElementById('fmTextContainer');
-const fmMapContainer = document.getElementById('fmMapContainer');
+const fmInput = base.el('fmInput');
+const fmStartBtn = base.el('fmStartBtn');
+const fmPauseBtn = base.el('fmPauseBtn');
+const fmResetBtn = base.el('fmResetBtn');
+const fmTextContainer = base.el('fmTextContainer');
+const fmMapContainer = base.el('fmMapContainer');
 
-let fmIntervalId = null;
+const fmState = { intervalId: null };
 let fmIndex = 0;
 let fmStr = '';
 let fmMap = {};
@@ -47,14 +47,11 @@ function fmStart() {
   fmMap = {};
   fmRender();
   fmPause();
-  fmIntervalId = setInterval(fmStep, 500);
+  base.play(fmState, fmStep, 500);
 }
 
 function fmPause() {
-  if (fmIntervalId) {
-    clearInterval(fmIntervalId);
-    fmIntervalId = null;
-  }
+  base.pause(fmState);
 }
 
 function fmReset() {

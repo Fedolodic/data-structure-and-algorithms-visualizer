@@ -1,11 +1,11 @@
-const tpArrayInput = document.getElementById('tpArrayInput');
-const tpTargetInput = document.getElementById('tpTarget');
-const tpStartBtn = document.getElementById('tpStartBtn');
-const tpPauseBtn = document.getElementById('tpPauseBtn');
-const tpResetBtn = document.getElementById('tpResetBtn');
-const tpArrayContainer = document.getElementById('tpArrayContainer');
+const tpArrayInput = base.el('tpArrayInput');
+const tpTargetInput = base.el('tpTarget');
+const tpStartBtn = base.el('tpStartBtn');
+const tpPauseBtn = base.el('tpPauseBtn');
+const tpResetBtn = base.el('tpResetBtn');
+const tpArrayContainer = base.el('tpArrayContainer');
 
-let tpIntervalId = null;
+const tpState = { intervalId: null };
 let left = 0;
 let right = 0;
 let tpArr = [];
@@ -57,14 +57,11 @@ function tpStart() {
     found = false;
     tpRenderArray();
     tpPause();
-    tpIntervalId = setInterval(tpStep, 1000);
+    base.play(tpState, tpStep, 1000);
 }
 
 function tpPause() {
-    if (tpIntervalId) {
-        clearInterval(tpIntervalId);
-        tpIntervalId = null;
-    }
+  base.pause(tpState);
 }
 
 function tpReset() {

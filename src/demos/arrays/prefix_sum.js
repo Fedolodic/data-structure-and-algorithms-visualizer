@@ -1,11 +1,11 @@
-const psArrayInput = document.getElementById('psArrayInput');
-const psStartBtn = document.getElementById('psStartBtn');
-const psPauseBtn = document.getElementById('psPauseBtn');
-const psResetBtn = document.getElementById('psResetBtn');
-const psOriginalContainer = document.getElementById('psOriginalContainer');
-const psPrefixContainer = document.getElementById('psPrefixContainer');
+const psArrayInput = base.el('psArrayInput');
+const psStartBtn = base.el('psStartBtn');
+const psPauseBtn = base.el('psPauseBtn');
+const psResetBtn = base.el('psResetBtn');
+const psOriginalContainer = base.el('psOriginalContainer');
+const psPrefixContainer = base.el('psPrefixContainer');
 
-let psIntervalId = null;
+const psState = { intervalId: null };
 let psIndex = 0;
 let psArr = [];
 let psPrefixArr = [];
@@ -47,14 +47,11 @@ function psStart() {
     psIndex = 0;
     psRenderArrays();
     psPause();
-    psIntervalId = setInterval(psStep, 1000);
+    base.play(psState, psStep, 1000);
 }
 
 function psPause() {
-    if (psIntervalId) {
-        clearInterval(psIntervalId);
-        psIntervalId = null;
-    }
+  base.pause(psState);
 }
 
 function psReset() {

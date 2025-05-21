@@ -1,11 +1,11 @@
-const imInput = document.getElementById("imInput");
-const imStartBtn = document.getElementById("imStartBtn");
-const imPauseBtn = document.getElementById("imPauseBtn");
-const imResetBtn = document.getElementById("imResetBtn");
-const imOriginalContainer = document.getElementById("imOriginalContainer");
-const imMergedContainer = document.getElementById("imMergedContainer");
+const imInput = base.el("imInput");
+const imStartBtn = base.el("imStartBtn");
+const imPauseBtn = base.el("imPauseBtn");
+const imResetBtn = base.el("imResetBtn");
+const imOriginalContainer = base.el("imOriginalContainer");
+const imMergedContainer = base.el("imMergedContainer");
 
-let imIntervalId = null;
+const imState = { intervalId: null };
 let imSorted = [];
 let imMerged = [];
 let imIndex = 0;
@@ -59,14 +59,11 @@ function imStart() {
   imIndex = 0;
   imRender();
   imPause();
-  if (imSorted.length > 0) imIntervalId = setInterval(imStep, 1000);
+  if (imSorted.length > 0) base.play(imState, imStep, 1000);
 }
 
 function imPause() {
-  if (imIntervalId) {
-    clearInterval(imIntervalId);
-    imIntervalId = null;
-  }
+  base.pause(imState);
 }
 
 function imReset() {

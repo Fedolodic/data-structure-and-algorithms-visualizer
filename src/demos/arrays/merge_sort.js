@@ -1,13 +1,13 @@
-const msArrayInput = document.getElementById('msArrayInput');
-const msStartBtn = document.getElementById('msStartBtn');
-const msPauseBtn = document.getElementById('msPauseBtn');
-const msResetBtn = document.getElementById('msResetBtn');
-const msArrayContainer = document.getElementById('msArrayContainer');
+const msArrayInput = base.el('msArrayInput');
+const msStartBtn = base.el('msStartBtn');
+const msPauseBtn = base.el('msPauseBtn');
+const msResetBtn = base.el('msResetBtn');
+const msArrayContainer = base.el('msArrayContainer');
 
 let msArr = [];
 let msSize = 1;
 let msStartIndex = 0;
-let msIntervalId = null;
+const msState = { intervalId: null };
 let msActiveStart = -1;
 let msActiveEnd = -1;
 
@@ -63,14 +63,11 @@ function msStart() {
   msActiveEnd = -1;
   msRender();
   msPause();
-  if (msArr.length > 1) msIntervalId = setInterval(msStep, 800);
+  if (msArr.length > 1) base.play(msState, msStep, 800);
 }
 
 function msPause() {
-  if (msIntervalId) {
-    clearInterval(msIntervalId);
-    msIntervalId = null;
-  }
+  base.pause(msState);
 }
 
 function msReset() {

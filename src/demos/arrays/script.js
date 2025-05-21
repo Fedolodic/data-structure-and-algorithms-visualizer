@@ -1,11 +1,11 @@
-const arrayInput = document.getElementById('arrayInput');
-const windowSizeInput = document.getElementById('windowSize');
-const startBtn = document.getElementById('startBtn');
-const pauseBtn = document.getElementById('pauseBtn');
-const resetBtn = document.getElementById('resetBtn');
-const arrayContainer = document.getElementById('arrayContainer');
+const arrayInput = base.el('arrayInput');
+const windowSizeInput = base.el('windowSize');
+const startBtn = base.el('startBtn');
+const pauseBtn = base.el('pauseBtn');
+const resetBtn = base.el('resetBtn');
+const arrayContainer = base.el('arrayContainer');
 
-let intervalId = null;
+const state = { intervalId: null };
 let index = 0;
 let arr = [];
 let windowSize = 3;
@@ -37,14 +37,11 @@ function start() {
     index = 0;
     renderArray();
     pause();
-    intervalId = setInterval(step, 1000);
+    base.play(state, step, 1000);
 }
 
 function pause() {
-    if (intervalId) {
-        clearInterval(intervalId);
-        intervalId = null;
-    }
+  base.pause(state);
 }
 
 function reset() {
