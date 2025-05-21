@@ -538,6 +538,38 @@ function upperBound(arr, target) {
   return l;
 }
 
+// Find the first index of target in a sorted array or -1 if not found
+function firstOccurrence(arr, target) {
+  let l = 0, r = arr.length - 1;
+  let res = -1;
+  while (l <= r) {
+    const m = Math.floor((l + r) / 2);
+    if (arr[m] >= target) {
+      if (arr[m] === target) res = m;
+      r = m - 1;
+    } else {
+      l = m + 1;
+    }
+  }
+  return res;
+}
+
+// Find the last index of target in a sorted array or -1 if not found
+function lastOccurrence(arr, target) {
+  let l = 0, r = arr.length - 1;
+  let res = -1;
+  while (l <= r) {
+    const m = Math.floor((l + r) / 2);
+    if (arr[m] <= target) {
+      if (arr[m] === target) res = m;
+      l = m + 1;
+    } else {
+      r = m - 1;
+    }
+  }
+  return res;
+}
+
 // Search in a rotated sorted array and return the index of target or -1
 function rotatedArraySearch(arr, target) {
   let l = 0, r = arr.length - 1;
@@ -591,6 +623,8 @@ module.exports = {
   createLRUCache,
   lowerBound,
   upperBound,
+  firstOccurrence,
+  lastOccurrence,
   findPeakElement,
   rotatedArraySearch,
   slidingWindowAnagram,
