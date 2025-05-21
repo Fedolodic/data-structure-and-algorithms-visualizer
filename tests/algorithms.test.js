@@ -62,6 +62,12 @@ assert.deepStrictEqual(
   [3,9,21,25,29,37,43,49]
 );
 
+// Interval merge
+assert.deepStrictEqual(
+  algo.mergeIntervals([[1,3],[2,4],[5,7],[6,8]]),
+  [[1,4],[5,8]]
+);
+
 // Radix sort
 assert.deepStrictEqual(
   algo.radixSort([170, 45, 75, 90, 802, 24, 2, 66]),

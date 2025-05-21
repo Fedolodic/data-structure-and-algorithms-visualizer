@@ -76,3 +76,6 @@ A Bloom filter is a probabilistic data structure that can quickly test whether a
 
 ## LRU Cache
 An LRU (Least Recently Used) cache stores a limited number of key-value pairs and evicts the least recently accessed item when capacity is exceeded. A doubly-linked list maintains usage order while a hash map allows O(1) lookups.
+
+## Interval Merge
+The interval merge algorithm combines overlapping intervals into a minimal set of non-overlapping ranges. Intervals are first sorted by start position. Then each interval is compared to the last merged range and either merged if overlapping or appended as a new range.
