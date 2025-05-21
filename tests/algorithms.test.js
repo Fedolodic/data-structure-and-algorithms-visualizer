@@ -62,6 +62,12 @@ assert.deepStrictEqual(
   [3,9,21,25,29,37,43,49]
 );
 
+// Radix sort
+assert.deepStrictEqual(
+  algo.radixSort([170, 45, 75, 90, 802, 24, 2, 66]),
+  [2, 24, 45, 66, 75, 90, 170, 802]
+);
+
 // Segment tree range sum
 const tree = algo.buildSegmentTree([1,3,5,7,9,11]);
 assert.strictEqual(algo.segmentTreeQuery(tree, 1, 3), 15);

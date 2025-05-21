@@ -63,7 +63,7 @@ Show animations for:
 - G-03 Greedy Exchange (change-making)
 - G-04 Activity Selection
 - ~~G-05 Counting Sort (dup in H but used greedily)~~
-- G-06 Radix Sort
+- ~~G-06 Radix Sort~~
 - G-07 Top-K with Heap
 - G-08 Monotonic Stack Skyline
 - G-09 Job Sequencing w/ DSU
@@ -159,9 +159,9 @@ Model concurrency scenarios visually:
 
 ## General Tasks
 - ~~Build minimal controls (start/pause/reset) for each visualization~~
-- Provide code snippets or pseudocode side-by-side with animations
+ - ~~Provide code snippets or pseudocode side-by-side with animations~~
 - ~~Write short text descriptions of each pattern~~
 - ~~Add unit tests where possible to verify algorithm outputs~~
 - ~~Document how to run the visualizer locally~~
-- Remember to update `explainer.md` whenever a new demo or algorithm is added
+ - ~~Remember to update `explainer.md` whenever a new demo or algorithm is added~~
 
