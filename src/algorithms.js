@@ -261,6 +261,18 @@ function sparseTableQuery(st, l, r) {
   return Math.min(table[k][l], table[k][r - (1 << k) + 1]);
 }
 
+// Check if any subarray sums to k using prefix sums and a hash map
+function subarraySumEqualsK(arr, k) {
+  let sum = 0;
+  const map = { 0: 1 };
+  for (const num of arr) {
+    sum += num;
+    if (map[sum - k]) return true;
+    map[sum] = (map[sum] || 0) + 1;
+  }
+  return false;
+}
+
 // Hash-map based two-sum check
 function hashMapTwoSum(arr, target) {
   const seen = new Set();
@@ -305,6 +317,7 @@ module.exports = {
   buildSparseTable,
   sparseTableQuery,
   frequencyMapCounting,
+  subarraySumEqualsK,
   hashMapTwoSum,
   hashSetIntersection,
 };

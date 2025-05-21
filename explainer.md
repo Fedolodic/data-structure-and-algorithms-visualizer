@@ -52,3 +52,6 @@ The hash map two-sum technique scans through an array while storing previously s
 
 ## Hash-Set Intersection
 Hash-set intersection collects the common elements between two arrays. One array is inserted into a set for constant-time lookups. We then scan the second array, checking if each value exists in the set and has not already been added to the result. This yields the intersection in linear time with respect to the total number of elements.
+
+## Prefix-Sum + Hash (Subarray Sum = K)
+To determine whether a subarray sums to a target `K`, we compute running prefix sums while storing previously seen sums in a map. At each step we check if `currentSum - K` has appeared before. If so, a subarray totaling `K` ends at the current index. This method finds a match in linear time.

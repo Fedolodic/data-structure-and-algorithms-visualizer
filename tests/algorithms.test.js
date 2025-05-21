@@ -83,5 +83,9 @@ assert.deepStrictEqual(
   []
 );
 
+// Prefix-Sum + Hash subarray sum equals K
+assert.strictEqual(algo.subarraySumEqualsK([1,2,3], 5), true);
+assert.strictEqual(algo.subarraySumEqualsK([1,2,3], 7), false);
+
 console.log('All tests passed!');
 
