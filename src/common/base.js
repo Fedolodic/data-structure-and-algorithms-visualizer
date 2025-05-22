@@ -21,10 +21,10 @@ function reset(state, resetFn) {
   }
 }
 
-function loadNav() {
+function loadNav(path = '../../common/nav.html') {
   const navContainer = document.getElementById('nav');
   if (!navContainer) return;
-  fetch('../../common/nav.html')
+  fetch(path)
     .then(res => res.text())
     .then(html => {
       navContainer.innerHTML = html;
