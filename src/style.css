@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+nav {
+    margin-bottom: 20px;
+}
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #0077cc;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+#arrayContainer {
+    margin-top: 20px;
+    display: flex;
+}
+#psOriginalContainer,
+#psPrefixContainer {
+    margin-top: 20px;
+    display: flex;
+}
+#rhTextContainer,
+#rhPatternContainer {
+    margin-top: 20px;
+    display: flex;
+}
+#ngeArrayContainer,
+#ngeStackContainer,
+#ngeResultContainer {
+    margin-top: 20px;
+    display: flex;
+}
+.array-item {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    text-align: center;
+    margin-right: 4px;
+}
+.array-item.active {
+    background-color: #4caf50;
+    color: white;
+}
+.pointer-left {
+    background-color: #2196f3;
+    color: white;
+}
+.pointer-right {
+    background-color: #f44336;
+    color: white;
+}
+.pair-found {
+    background-color: #ff9800;
+    color: white;
+}
+.pointer-low {
+    background-color: #9c27b0;
+    color: white;
+}
+.pointer-mid {
+    background-color: #03a9f4;
+    color: white;
+}
+.pointer-high {
+    background-color: #e91e63;
+    color: white;
+}
+
+.seen-item {
+    background-color: #ffeb3b;
+}
